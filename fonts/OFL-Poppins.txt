@@ -1,0 +1,3 @@
+Poppins — Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins), licencja SIL Open Font License 1.1, https://openfontlicense.org
+
+Pliki: Poppins-Regular.ttf, Poppins-SemiBold.ttf (bez zmian).

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title data-en="Aorum Files — file manager (coming soon)">Aorum Files — menedżer plików (wkrótce)</title>
+<meta name="description" content="Aorum Files: pliki z iPhone'a, iCloud Drive, usług w chmurze i serwerów w jednym miejscu, bez konta Aorum. Wkrótce." data-en="Aorum Files: files from your iPhone, iCloud Drive, cloud services and servers in one place, with no Aorum account. Coming soon.">
+<link rel="canonical" href="https://aorum.app/files/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aorum">
+<meta property="og:title" content="Aorum Files — menedżer plików (wkrótce)" data-en="Aorum Files — file manager (coming soon)">
+<meta property="og:description" content="Aorum Files: pliki z iPhone'a, iCloud Drive, usług w chmurze i serwerów w jednym miejscu, bez konta Aorum. Wkrótce." data-en="Aorum Files: files from your iPhone, iCloud Drive, cloud services and servers in one place, with no Aorum account. Coming soon.">
+<meta property="og:url" content="https://aorum.app/files/">
+<meta property="og:image" content="https://aorum.app/assets/og-aorum.png?v=44ec06deefb1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1B37">
+<link rel="icon" type="image/svg+xml" href="../assets/aorum-circle-workspace-v8.svg?v=303d2d378afb">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icon-32-dark.png?v=c55a4bd66a23" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icon-32.png?v=68afe5f422b2" media="(prefers-color-scheme: light)">
+<link rel="apple-touch-icon" href="../assets/icon-180.png?v=2bcad72b7dd0">
+<link rel="manifest" href="../site.webmanifest?v=20f77d7f7c15">
+<link rel="stylesheet" href="../site.css?v=a16a77786f4f">
+<script src="../lang-switch.js?v=d2f5f3855a7a"></script>
+<script src="../site-interactions.js?v=a74e56f8f792" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg><span class="lang-pl" lang="pl">Przejdź do treści</span><span class="lang-en" lang="en">Skip to content</span></a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand brand--workspace" href="../index.html"><picture><source media="(max-width: 1040px)" srcset="../assets/aorum-wordmark-workspace-v8-dark.svg?v=832a82b53ed2" width="633" height="153"><img src="../assets/aorum-workspace-logo-v8-dark.svg?v=c198df8adf02" alt="Aorum Workspace" width="633" height="214"></picture></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm12-88a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,128Zm-88,0a12,12,0,1,1-12-12A12,12,0,0,1,96,128Z"/></svg>Menu</button>
+    <nav class="site-nav" id="site-navigation" aria-label="Aorum">
+      <ul>
+      <li><a href="../mail/index.html"><img class="nav-app-icon" src="../assets/aorum-mail-icon.png?v=5b5c8e3285fb" alt="" width="24" height="24">Mail</a></li>
+      <li><a href="../files/index.html" aria-current="page"><img class="nav-app-icon" src="../assets/aorum-files-icon.png?v=b34d423bf86b" alt="" width="24" height="24">Files</a></li>
+      <li><a href="../calendar/index.html"><img class="nav-app-icon" src="../assets/aorum-calendar-icon.png?v=64d8c53612d8" alt="" width="24" height="24">Plan</a></li>
+      <li><a href="../projects/index.html"><img class="nav-app-icon" src="../assets/aorum-projects-icon.png?v=ed17d9c58921" alt="" width="24" height="24">Projects</a></li>
+      <li><a href="../index.html#pricing"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88l45.63-68.44A8,8,0,0,0,246.66,123.56ZM187.72,192H40V64H187.72l42.66,64Z"/></svg><span class="lang-pl" lang="pl">Cennik</span><span class="lang-en" lang="en">Pricing</span></a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+    <div class="lang-switch" role="group" aria-label="Wybór języka / Language">
+      <button type="button" id="lang-pl-btn" aria-pressed="true"><span>PL</span></button>
+      <button type="button" id="lang-en-btn" aria-pressed="false"><span>EN</span></button>
+    </div>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero hero--compact hero--app">
+  <div class="wrap hero__grid">
+    <div>
+      <div class="lang-pl" lang="pl">
+        <p class="eyebrow"><span><span class="product-copy">Aorum <span class="product-name">Workspace</span></span></span><span class="badge">Wkrótce</span></p>
+        <h1><span class="product-copy">Aorum <span class="product-name">Files</span></span></h1>
+        <p class="hero__lead">Menedżer plików na iPhone'a w&nbsp;wyglądzie Aorum. Pliki z&nbsp;telefonu, iCloud Drive, usług w&nbsp;chmurze i&nbsp;serwerów w&nbsp;jednym miejscu — bez konta Aorum i&nbsp;bez naszego serwera. Z&nbsp;chmurą łączysz się, logując się bezpośrednio u&nbsp;dostawcy, a&nbsp;dane logowania zostają w&nbsp;pęku kluczy iPhone'a.</p>
+        <p class="hero__note">iPhone, iOS 18.5 lub nowszy · Mac — wkrótce</p>
+      </div>
+      <div class="lang-en" lang="en">
+        <p class="eyebrow"><span><span class="product-copy">Aorum <span class="product-name">Workspace</span></span></span><span class="badge">Coming soon</span></p>
+        <h1><span class="product-copy">Aorum <span class="product-name">Files</span></span></h1>
+        <p class="hero__lead">A&nbsp;file manager for iPhone in the Aorum style. Files from your phone, iCloud Drive, cloud services and servers in one place — with no Aorum account and no server of ours. You connect to each cloud by signing in with the provider directly, and your sign-in data stays in the iPhone keychain.</p>
+        <p class="hero__note">iPhone, iOS 18.5 or later · Mac — coming soon</p>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <span class="product-mark product-mark--app"><img src="../assets/aorum-files-icon.png?v=b34d423bf86b" alt="" width="168" height="168"></span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="lang-pl" lang="pl">W&nbsp;planie wersji 1.0</h2>
+      <h2 class="lang-en" lang="en">Planned for version 1.0</h2>
+      <p class="lang-pl" lang="pl">Aplikacja jest w&nbsp;przygotowaniu. Poniższe funkcje są w&nbsp;planie pierwszej wersji; zakres może się jeszcze zmienić.</p>
+      <p class="lang-en" lang="en">The app is in the works. These features are planned for the first version; the scope may still change.</p>
+    </div>
+    <div class="grid grid--3">
+      <div class="card">
+        <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 00.5-7.97A6 6 0 006.1 9.2 4.5 4.5 0 007 18z"/></svg></span>
+        <div class="lang-pl" lang="pl">
+          <h3>Wszystkie miejsca w&nbsp;jednym</h3>
+          <p>iPhone, iCloud Drive, Dropbox, Google Drive (także pliki udostępnione i&nbsp;dyski współdzielone), OneDrive, Box, pCloud, Backblaze B2 i&nbsp;dyski zewnętrzne.</p>
+        </div>
+        <div class="lang-en" lang="en">
+          <h3>Every place in one</h3>
+          <p>iPhone, iCloud Drive, Dropbox, Google Drive (including shared files and shared drives), OneDrive, Box, pCloud, Backblaze B2 and external drives.</p>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card__icon card__icon--green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4.5" width="16" height="6.5" rx="1.5"/><rect x="4" y="13" width="16" height="6.5" rx="1.5"/><path d="M7.5 7.75h.01M7.5 16.25h.01"/></svg></span>
+        <div class="lang-pl" lang="pl">
+          <h3>Serwery i&nbsp;sieć</h3>
+          <p>WebDAV, S3, FTP/FTPS i&nbsp;SFTP, wykrywanie serwerów w&nbsp;sieci lokalnej oraz terminal SSH.</p>
+        </div>
+        <div class="lang-en" lang="en">
+          <h3>Servers and network</h3>
+          <p>WebDAV, S3, FTP/FTPS and SFTP, discovery of servers on your local network, and an SSH terminal.</p>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="4.5" width="17" height="4" rx="1"/><path d="M5 8.5v10A1.5 1.5 0 006.5 20h11a1.5 1.5 0 001.5-1.5v-10"/><path d="M10 12.5h4"/></svg></span>
+        <div class="lang-pl" lang="pl">
+          <h3>Archiwa</h3>
+          <p>Otwieranie ZIP, RAR, 7z, TAR, gz/bz2/xz i&nbsp;ISO; tworzenie archiwów ZIP i&nbsp;7z z&nbsp;hasłem.</p>
+        </div>
+        <div class="lang-en" lang="en">
+          <h3>Archives</h3>
+          <p>Open ZIP, RAR, 7z, TAR, gz/bz2/xz and ISO; create password-protected ZIP and 7z archives.</p>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card__icon card__icon--green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span>
+        <div class="lang-pl" lang="pl">
+          <h3>Szukanie i&nbsp;porządek</h3>
+          <p>Szukanie w&nbsp;nazwach i&nbsp;treści, z&nbsp;wyrażeniami regularnymi, filtrami i&nbsp;zapisanymi wyszukiwaniami. Tagi Findera i&nbsp;Pulpit z&nbsp;kaflami lokalizacji.</p>
+        </div>
+        <div class="lang-en" lang="en">
+          <h3>Search and order</h3>
+          <p>Search file names and contents, with regular expressions, filters and saved searches. Finder tags and a&nbsp;Dashboard with location tiles.</p>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8.5 8l-4 4 4 4M15.5 8l4 4-4 4M13.5 5.5l-3 13"/></svg></span>
+        <div class="lang-pl" lang="pl">
+          <h3>Podgląd i&nbsp;edycja</h3>
+          <p>Podgląd plików z&nbsp;edytorem tekstu, widokiem Hex i&nbsp;kolorowaniem kodu.</p>
+        </div>
+        <div class="lang-en" lang="en">
+          <h3>Preview and edit</h3>
+          <p>File preview with a&nbsp;text editor, a&nbsp;hex view and syntax highlighting.</p>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card__icon card__icon--green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 018 0v2.5"/></svg></span>
+        <div class="lang-pl" lang="pl">
+          <h3>Bezpieczeństwo i&nbsp;wygoda</h3>
+          <p>Zaszyfrowane foldery w&nbsp;chmurze, karty, operacje na wielu plikach z&nbsp;cofaniem, kosz „Ostatnio usunięte”, blokada Face ID i&nbsp;układ Duo przygotowany z&nbsp;myślą o&nbsp;składanym iPhonie.</p>
+        </div>
+        <div class="lang-en" lang="en">
+          <h3>Safety and comfort</h3>
+          <p>Encrypted cloud folders, tabs, multi-file operations with undo, a&nbsp;“Recently Deleted” bin, Face ID lock, and a&nbsp;Duo layout designed with a&nbsp;foldable iPhone in mind.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="notify">
+  <div class="wrap">
+    <div class="notify">
+      <div class="lang-pl" lang="pl">
+        <h2>Daj znać, że czekasz</h2>
+        <p><span class="product-copy">Napisz do nas — damy znać, gdy aplikacja Aorum <span class="product-name">Files</span> będzie gotowa.</span></p>
+      </div>
+      <div class="lang-en" lang="en">
+        <h2>Let us know you're waiting</h2>
+        <p><span class="product-copy">Drop us a&nbsp;line and we'll tell you when Aorum <span class="product-name">Files</span> is ready.</span></p>
+      </div>
+      <div>
+        <a class="btn btn--primary lang-pl" lang="pl" href="mailto:support@aorum.app?subject=Aorum%20Files%20%E2%80%94%20chc%C4%99%20wiedzie%C4%87%20o%20premierze"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></svg><span>Napisz do nas</span></a>
+        <a class="btn btn--primary lang-en" lang="en" href="mailto:support@aorum.app?subject=Aorum%20Files%20%E2%80%94%20let%20me%20know%20when%20it%20launches"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></svg><span>Email us</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="footer-about">
+      <a class="brand brand--workspace" href="../index.html"><picture><source media="(max-width: 1040px)" srcset="../assets/aorum-wordmark-workspace-v8-dark.svg?v=832a82b53ed2" width="633" height="153"><img src="../assets/aorum-workspace-logo-v8-dark.svg?v=c198df8adf02" alt="Aorum Workspace" width="633" height="214"></picture></a>
+      <p class="footer-tagline"><span class="lang-pl" lang="pl">Kompletne środowisko pracy dla profesjonalistów. W&nbsp;eleganckim wydaniu.</span><span class="lang-en" lang="en">The complete workspace for professionals. Elegantly crafted.</span></p>
+    </div>
+    <nav aria-label="Aplikacje Aorum / Aorum apps">
+      <p class="footer-h"><span class="lang-pl" lang="pl">Aplikacje</span><span class="lang-en" lang="en">Apps</span></p>
+      <ul>
+        <li><a class="footer-app-link" href="../mail/index.html"><img src="../assets/aorum-mail-icon.png?v=5b5c8e3285fb" alt="" width="24" height="24" loading="lazy"><span class="product-copy">Aorum <span class="product-name">Mail</span></span></a></li>
+        <li><a class="footer-app-link" href="../files/index.html"><img src="../assets/aorum-files-icon.png?v=b34d423bf86b" alt="" width="24" height="24" loading="lazy"><span class="product-copy">Aorum <span class="product-name">Files</span></span></a></li>
+        <li><a class="footer-app-link" href="../calendar/index.html"><img src="../assets/aorum-calendar-icon.png?v=64d8c53612d8" alt="" width="24" height="24" loading="lazy"><span class="product-copy">Aorum <span class="product-name">Plan</span></span></a></li>
+        <li><a class="footer-app-link" href="../projects/index.html"><img src="../assets/aorum-projects-icon.png?v=ed17d9c58921" alt="" width="24" height="24" loading="lazy"><span class="product-copy">Aorum <span class="product-name">Projects</span></span></a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Informacje / Information">
+      <p class="footer-h"><span class="lang-pl" lang="pl">Informacje</span><span class="lang-en" lang="en">Information</span></p>
+      <ul>
+        <li><a class="footer-info-link" href="../index.html#pricing"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88l45.63-68.44A8,8,0,0,0,246.66,123.56ZM187.72,192H40V64H187.72l42.66,64Z"/></svg><span class="lang-pl" lang="pl">Cennik</span><span class="lang-en" lang="en">Pricing</span></a></li>
+        <li><a class="footer-info-link" href="../privacy.html"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg><span class="lang-pl" lang="pl">Prywatność</span><span class="lang-en" lang="en">Privacy</span></a></li>
+        <li><a class="footer-info-link" href="../terms.html"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg><span class="lang-pl" lang="pl">Regulamin</span><span class="lang-en" lang="en">Terms</span></a></li>
+        <li><a class="footer-info-link" href="../support.html"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><span class="lang-pl" lang="pl">Pomoc</span><span class="lang-en" lang="en">Support</span></a></li>
+        <li><a class="footer-info-link" href="mailto:support@aorum.app"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></svg>support@aorum.app</a></li>
+      </ul>
+    </nav>
+    <p class="footer-legal">© 2026 Vansa Sp. z&nbsp;o.o., ul. Jana Smolenia 14, 30-864 Kraków (KRS 0000675425, NIP 6793148076)</p>
+  </div>
+</footer>
+<template id="icon-viewer-zoom"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></template>
+<template id="icon-viewer-fit"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a96,96,0,0,1-94.71,96H128A95.38,95.38,0,0,1,62.1,197.8a8,8,0,0,1,11-11.63A80,80,0,1,0,71.43,71.39a3.07,3.07,0,0,1-.26.25L44.59,96H72a8,8,0,0,1,0,16H24a8,8,0,0,1-8-8V56a8,8,0,0,1,16,0V85.8L60.25,60A96,96,0,0,1,224,128Z"/></svg></template>
+<template id="icon-viewer-next"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></template>
+<template id="icon-viewer-close"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></template>
+</body>
+</html>

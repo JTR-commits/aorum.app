@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title data-en="Aorum Mail — professional email for iPhone">Aorum Mail — profesjonalna poczta na iPhone'a</title>
+<meta name="description" content="Aorum Mail: Gmail, Outlook, iCloud i IMAP w jednej skrzynce na iPhonie. Pulpit, Osoby, centrum załączników, OpenPGP i S/MIME. Premiera 1.0: październik 2026." data-en="Aorum Mail: Gmail, Outlook, iCloud and IMAP in one iPhone inbox. Dashboard, People, an attachments hub, OpenPGP and S/MIME. Version 1.0 launches in October 2026.">
+<link rel="canonical" href="https://aorum.app/mail/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aorum">
+<meta property="og:title" content="Aorum Mail — profesjonalna poczta na iPhone'a" data-en="Aorum Mail — professional email for iPhone">
+<meta property="og:description" content="Aorum Mail: Gmail, Outlook, iCloud i IMAP w jednej skrzynce na iPhonie. Pulpit, Osoby, centrum załączników, OpenPGP i S/MIME. Premiera 1.0: październik 2026." data-en="Aorum Mail: Gmail, Outlook, iCloud and IMAP in one iPhone inbox. Dashboard, People, an attachments hub, OpenPGP and S/MIME. Version 1.0 launches in October 2026.">
+<meta property="og:url" content="https://aorum.app/mail/">
+<meta property="og:image" content="https://aorum.app/assets/og-aorum.png?v=44ec06deefb1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1B37">
+<link rel="icon" type="image/svg+xml" href="../assets/aorum-circle-workspace-v8.svg?v=303d2d378afb">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icon-32-dark.png?v=c55a4bd66a23" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icon-32.png?v=68afe5f422b2" media="(prefers-color-scheme: light)">
+<link rel="apple-touch-icon" href="../assets/icon-180.png?v=2bcad72b7dd0">
+<link rel="manifest" href="../site.webmanifest?v=20f77d7f7c15">
+<link rel="stylesheet" href="../site.css?v=a16a77786f4f">
+<script src="../lang-switch.js?v=d2f5f3855a7a"></script>
+<script src="../site-interactions.js?v=a74e56f8f792" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg><span class="lang-pl" lang="pl">Przejdź do treści</span><span class="lang-en" lang="en">Skip to content</span></a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand brand--workspace" href="../index.html"><picture><source media="(max-width: 1040px)" srcset="../assets/aorum-wordmark-workspace-v8-dark.svg?v=832a82b53ed2" width="633" height="153"><img src="../assets/aorum-workspace-logo-v8-dark.svg?v=c198df8adf02" alt="Aorum Workspace" width="633" height="214"></picture></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm12-88a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,128Zm-88,0a12,12,0,1,1-12-12A12,12,0,0,1,96,128Z"/></svg>Menu</button>
+    <nav class="site-nav" id="site-navigation" aria-label="Aorum">
+      <ul>
+      <li><a href="../mail/index.html" aria-current="page"><img class="nav-app-icon" src="../assets/aorum-mail-icon.png?v=5b5c8e3285fb" alt="" width="24" height="24">Mail</a></li>
+      <li><a href="../files/index.html"><img class="nav-app-icon" src="../assets/aorum-files-icon.png?v=b34d423bf86b" alt="" width="24" height="24">Files</a></li>
+      <li><a href="../calendar/index.html"><img class="nav-app-icon" src="../assets/aorum-calendar-icon.png?v=64d8c53612d8" alt="" width="24" height="24">Plan</a></li>
+      <li><a href="../projects/index.html"><img class="nav-app-icon" src="../assets/aorum-projects-icon.png?v=ed17d9c58921" alt="" width="24" height="24">Projects</a></li>
+      <li><a href="../index.html#pricing"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88l45.63-68.44A8,8,0,0,0,246.66,123.56ZM187.72,192H40V64H187.72l42.66,64Z"/></svg><span class="lang-pl" lang="pl">Cennik</span><span class="lang-en" lang="en">Pricing</span></a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+    <div class="lang-switch" role="group" aria-label="Wybór języka / Language">
+      <button type="button" id="lang-pl-btn" aria-pressed="true"><span>PL</span></button>
+      <button type="button" id="lang-en-btn" aria-pressed="false"><span>EN</span></button>
+    </div>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero hero--product">
+  <div class="wrap hero__grid">
+    <div>
+      <div class="lang-pl" lang="pl">
+        <p class="eyebrow eyebrow--logo"><img class="product-app-icon" src="../assets/aorum-mail-icon.png?v=5b5c8e3285fb" alt="" width="48" height="48"><img class="product-logo" src="../assets/aorum-mail-logo-dark.svg?v=522c9b8bc306" alt="Aorum Mail" width="170" height="40"><span class="badge badge--live">Premiera 1.0: październik 2026</span></p>
+        <h1>Jedna elegancka skrzynka na Gmaila, Outlooka, iCloud i&nbsp;IMAP</h1>
+        <p class="hero__lead"><span class="product-copy">Aorum <span class="product-name">Mail</span> łączy konta, osoby i&nbsp;załączniki w&nbsp;jednym miejscu na iPhonie, z&nbsp;Pulpitem do codziennego porządkowania poczty. Poczta trafia prosto od dostawcy na Twoje urządzenie — nie przechowujemy jej treści na naszych serwerach.</span></p>
+        <div class="btn-row">
+                    <a class="btn btn--primary" href="https://apps.apple.com/app/id{{APP_STORE_ID}}"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg><span><span class="product-copy">Aorum <span class="product-name">Mail</span> w&nbsp;App Store</span></span></a>
+          <a class="btn btn--ghost" href="#pricing"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88l45.63-68.44A8,8,0,0,0,246.66,123.56ZM187.72,192H40V64H187.72l42.66,64Z"/></svg><span>Cennik</span></a>
+        </div>
+        <p class="hero__note">Tydzień za darmo, potem Pro · iPhone, iOS 18.5 lub nowszy</p>
+      </div>
+      <div class="lang-en" lang="en">
+        <p class="eyebrow eyebrow--logo"><img class="product-app-icon" src="../assets/aorum-mail-icon.png?v=5b5c8e3285fb" alt="" width="48" height="48"><img class="product-logo" src="../assets/aorum-mail-logo-dark.svg?v=522c9b8bc306" alt="Aorum Mail" width="170" height="40"><span class="badge badge--live">1.0 launches October 2026</span></p>
+        <h1>One elegant inbox for Gmail, Outlook, iCloud and&nbsp;IMAP</h1>
+        <p class="hero__lead"><span class="product-copy">Aorum <span class="product-name">Mail</span> brings your accounts, people and attachments together on your iPhone, with a&nbsp;Dashboard built for daily triage. Mail comes straight from your provider to your device — we don't store its content on our servers.</span></p>
+        <div class="btn-row">
+                    <a class="btn btn--primary" href="https://apps.apple.com/app/id{{APP_STORE_ID}}"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg><span><span class="product-copy">Aorum <span class="product-name">Mail</span> on the App Store</span></span></a>
+          <a class="btn btn--ghost" href="#pricing"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88l45.63-68.44A8,8,0,0,0,246.66,123.56ZM187.72,192H40V64H187.72l42.66,64Z"/></svg><span>Pricing</span></a>
+        </div>
+        <p class="hero__note">One week free, then Pro · iPhone, iOS 18.5 or later</p>
+      </div>
+    </div>
+    <div class="hero__visual hero__visual--real">
+      <figure class="mail-device">
+        <a class="screen-link" href="../assets/duo/duo-folded-thread.webp" data-zoom-image data-caption-pl="Rozmowa w Aorum Mail" data-caption-en="A conversation in Aorum Mail">
+          <img src="../assets/duo/duo-folded-thread.webp" width="859" height="1192" fetchpriority="high" alt="Aorum Mail — Threads">
+          <span class="screen-link__hint"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg><span class="lang-pl" lang="pl">Zobacz z&nbsp;bliska</span><span class="lang-en" lang="en">Take a&nbsp;closer look</span></span>
+        </a>
+        <figcaption><span class="lang-pl" lang="pl">Twoje rozmowy. Wszystko na swoim miejscu.</span><span class="lang-en" lang="en">Your conversations. Everything in its place.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<nav class="page-nav" aria-label="Aorum Mail">
+  <div class="wrap">
+    <ul>
+      <li><a href="#features"><span class="lang-pl" lang="pl">Trzy osie</span><span class="lang-en" lang="en">Three axes</span></a></li>
+      <li><a href="#dashboard"><span class="lang-pl" lang="pl">Pulpit</span><span class="lang-en" lang="en">Dashboard</span></a></li>
+      <li><a href="#more"><span class="lang-pl" lang="pl">Funkcje</span><span class="lang-en" lang="en">Features</span></a></li>
+      <li><a href="#privacy"><span class="lang-pl" lang="pl">Prywatność</span><span class="lang-en" lang="en">Privacy</span></a></li>
+      <li><a href="#pricing"><span class="lang-pl" lang="pl">Cennik</span><span class="lang-en" lang="en">Pricing</span></a></li>
+      <li><a href="#compare"><span class="lang-pl" lang="pl">Porównanie</span><span class="lang-en" lang="en">Comparison</span></a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="lang-pl" lang="pl">Trzy sposoby na dostęp do poczty</h2>
+      <h2 class="lang-en" lang="en">Three ways into your mail</h2>
+    </div>
+    <div class="grid grid--3">
+      <div class="card">
+        <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg></span>
+        <div class="lang-pl" lang="pl">
+          <h3>Wiadomości</h3>
+          <p>Każda skrzynka — Gmail, Outlook/Microsoft 365, iCloud Mail i&nbsp;dowolne konto IMAP/SMTP — w&nbsp;jednym wspólnym Inboxie albo osobno, jednym dotknięciem.</p>
+        </div>
+        <div class="lang-en" lang="en">
+          <h3>Messages</h3>
+          <p>Every mailbox — Gmail, Outlook/Microsoft 365, iCloud Mail and any IMAP/SMTP account — in one unified inbox, or one at a&nbsp;time with a&nbsp;tap.</p>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card__icon card__icon--green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 19.5c1.5-3.5 4.8-5.3 7.5-5.3s6 1.8 7.5 5.3"/></svg></span>
+        <div class="lang-pl" lang="pl">
+          <h3>Osoby</h3>
+          <p>Rozmowy pogrupowane według osoby albo grupy, z&nbsp;którą piszesz, ulubione kontakty i&nbsp;karta kontaktu z&nbsp;historią korespondencji.</p>
+        </div>
+        <div class="lang-en" lang="en">
+          <h3>People</h3>
+          <p>Conversations grouped by the person or group you're writing to, favourite contacts, and a&nbsp;contact card with your history together.</p>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 12.5l6.5-6.5a3 3 0 114.2 4.2L11 18a5 5 0 11-7-7l7.3-7.3"/></svg></span>
+        <div class="lang-pl" lang="pl">
+          <h3>Załączniki</h3>
+          <p>Centrum załączników: wszystkie pliki ze wszystkich kont w&nbsp;jednym miejscu, z&nbsp;filtrem po typie, osobie albo dacie.</p>
+        </div>
+        <div class="lang-en" lang="en">
+          <h3>Attachments</h3>
+          <p>An attachments hub: every file from every account in one place, filterable by type, person or date.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="dashboard">
+  <div class="wrap split">
+    <div>
+      <div class="lang-pl" lang="pl">
+        <h2 class="section-title">Pulpit i&nbsp;porządkowanie poczty</h2>
+        <p class="hero__lead">Jeden ekran na to, co wymaga uwagi: New, Unread, Pin, Important, Favorites, Reminders, Follow-ups i&nbsp;Quick Triage.</p>
+      </div>
+      <div class="lang-en" lang="en">
+        <h2 class="section-title">Dashboard &amp; triage</h2>
+        <p class="hero__lead">A&nbsp;single screen for what needs your attention: New, Unread, Pin, Important, Favorites, Reminders, Follow-ups and Quick Triage.</p>
+      </div>
+    </div>
+    <div>
+      <ul class="plain-list lang-pl" lang="pl">
+        <li><strong>Later</strong> (odłóż) — wiadomość znika i&nbsp;wraca dokładnie wtedy, kiedy chcesz.</li>
+        <li><strong>Set aside</strong> (odłóż bez terminu) — zostaw coś na później, bez konkretnej daty.</li>
+        <li><strong>Reminder</strong> i&nbsp;„przypomnij, jeśli brak odpowiedzi” — przypomnienie, gdy wątek milczy od 1 do 7 dni.</li>
+        <li><strong>Quick Triage</strong> — szybki przegląd najnowszych nieprzeczytanych wiadomości, jedna po drugiej.</li>
+      </ul>
+      <ul class="plain-list lang-en" lang="en">
+        <li><strong>Later</strong> — push a&nbsp;message aside; it comes back exactly when you asked.</li>
+        <li><strong>Set aside</strong> — park something with no deadline.</li>
+        <li><strong>Reminder</strong> and “remind me if no reply” — a&nbsp;nudge when a&nbsp;thread stays quiet for 1 to 7 days.</li>
+        <li><strong>Quick Triage</strong> — work through your newest unread messages, one at a&nbsp;time.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="more">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="lang-pl" lang="pl">Więcej w&nbsp;wersji 1.0</h2>
+      <h2 class="lang-en" lang="en">More in version 1.0</h2>
+      <p class="lang-pl" lang="pl">Funkcje, które zwykle wymagają komputera albo kilku aplikacji — tu są na iPhonie.</p>
+      <p class="lang-en" lang="en">Things that usually need a&nbsp;computer or several apps — here they're on your iPhone.</p>
+    </div>
+
+    <ul class="feature-list lang-pl" lang="pl">
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 018 0v2.5"/></svg></span><div><h3>OpenPGP i&nbsp;S/MIME</h3><p>Szyfrowanie i&nbsp;podpis wiadomości w&nbsp;obu standardach. Klucz prywatny OpenPGP zostaje na iPhonie.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></span><div><h3>Reguły i&nbsp;autoodpowiedź z&nbsp;telefonu</h3><p>Ustawiasz je prosto w&nbsp;aplikacji, bez siadania do komputera.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><h3>Gatekeeper</h3><p>Decydujesz, czy wiadomości od nowego nadawcy mają trafiać do skrzynki.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4l8 4-8 4-8-4 8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 16l8 4 8-4"/></svg></span><div><h3>Kategorie skrzynki</h3><p>Uczący się podział poczty na cztery kategorie, liczony na urządzeniu.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><div><h3>Wysyłka zaplanowana z&nbsp;serwera</h3><p>Opcjonalnie, osobno dla każdego konta: wiadomość czeka jako szkic w&nbsp;Twojej skrzynce, a&nbsp;nasz serwer wysyła ją o&nbsp;czasie, także gdy telefon jest wyłączony.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 7l-4.5 4.5L9 16"/><path d="M5 11.5h8.5a5 5 0 010 10H11"/></svg></span><div><h3>Cofnięcie wysyłki</h3><p>Od 5 do 60 sekund na zmianę zdania.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 16v-5a6 6 0 0112 0v5l1.5 2h-15L6 16z"/><path d="M10 20.5a2 2 0 004 0"/></svg></span><div><h3>Powiadomienia o&nbsp;nowej poczcie</h3><p>Dla Gmaila, a&nbsp;także dla Outlooka/Microsoft 365, iCloud i&nbsp;IMAP — opcjonalnie, przez nasz serwer powiadomień.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 13l3.5 3.5L13.5 9"/><path d="M11 16.5l.5.5L19 9.5"/></svg></span><div><h3>Potwierdzenia przeczytania</h3><p>Standardowe (MDN) i&nbsp;widoczne dla odbiorcy — bez pikseli śledzących.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c1-3 3.2-4.5 5.5-4.5s4.5 1.5 5.5 4.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5c2 0 3.8 1.2 4.5 3.5"/></svg></span><div><h3>Wspólne szkice i&nbsp;komentarze</h3><p>Przygotuj wiadomość razem z&nbsp;wybranymi osobami, przez udostępnianie iCloud.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span><div><h3>Ask</h3><p>Wyszukiwanie według znaczenia, w&nbsp;zdjęciach i&nbsp;skanach (OCR) oraz w&nbsp;dokumentach DOCX i&nbsp;XLSX — na urządzeniu; wymagania jak przy funkcjach AI (niżej).</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 00.5-7.97A6 6 0 006.1 9.2 4.5 4.5 0 007 18z"/></svg></span><div><h3>Duże pliki jako link</h3><p>Plik trafia z&nbsp;iPhone'a na Twój Dysk Google albo OneDrive, a&nbsp;do wiadomości — link.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3l18 18"/><path d="M10.6 6.1c.5-.1.9-.1 1.4-.1 5 0 8.5 4.5 9.5 6-.5.8-1.6 2.3-3.2 3.6"/><path d="M6.3 7.8C4.6 9 3.3 10.8 2.5 12c1 1.5 4.5 6 9.5 6 1.4 0 2.7-.3 3.8-.9"/><path d="M9.9 9.9a3 3 0 004.2 4.2"/></svg></span><div><h3>Ochrona przed pikselami</h3><p>Zdalne obrazki śledzące są domyślnie blokowane.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></svg></span><div><h3>Wypisanie i&nbsp;blokada</h3><p>Wypisz się z&nbsp;listy albo zablokuj nadawcę z&nbsp;poziomu wiadomości.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="3.5"/><path d="M10.5 12.5L19 4M16 7l2.5 2.5M14 9l1.5 1.5"/></svg></span><div><h3>Blokada aplikacji</h3><p>Aplikację możesz zablokować Face ID.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19.5 12a7.5 7.5 0 11-2.2-5.3"/><path d="M19.5 4.5v4h-4"/></svg></span><div><h3>Synchronizacja przez iCloud</h3><p>Przypięcia, przypomnienia, podpisy i&nbsp;szablony w&nbsp;Twoim prywatnym iCloud — bez treści poczty.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="5.5" width="16" height="14.5" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg></span><div><h3>Zaproszenia</h3><p>Odpowiadasz na zaproszenie na spotkanie prosto z&nbsp;wiadomości.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5l1.8 5.2 5.2 1.8-5.2 1.8-1.8 5.2-1.8-5.2L5 10.5l5.2-1.8z"/><path d="M18.5 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><div><h3>AI na urządzeniu i&nbsp;AI+</h3><p>Pisanie, odpowiedzi i&nbsp;podsumowania wątków przez Apple Intelligence na urządzeniu. Po polsku działa AI+ w&nbsp;chmurze — płatny dodatek.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 5v14"/></svg></span><div><h3>Układ Duo</h3><p>Lista i&nbsp;wiadomość obok siebie — układ przygotowany z&nbsp;myślą o&nbsp;składanym iPhonie.</p></div></li>
+    </ul>
+
+    <ul class="feature-list lang-en" lang="en">
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 018 0v2.5"/></svg></span><div><h3>OpenPGP and S/MIME</h3><p>Encrypt and sign messages with either standard. Your OpenPGP private key stays on your iPhone.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></span><div><h3>Rules and auto-reply from your phone</h3><p>Set them up right in the app — no computer needed.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><h3>Gatekeeper</h3><p>You decide whether mail from a&nbsp;new sender reaches your inbox.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4l8 4-8 4-8-4 8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 16l8 4 8-4"/></svg></span><div><h3>Inbox categories</h3><p>A&nbsp;learning split into four categories, worked out on the device.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><div><h3>Scheduled sending from our server</h3><p>Optional, per account: the message waits as a&nbsp;draft in your mailbox and our server sends it on time — even with your phone switched off.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 7l-4.5 4.5L9 16"/><path d="M5 11.5h8.5a5 5 0 010 10H11"/></svg></span><div><h3>Undo send</h3><p>Between 5 and 60 seconds to change your mind.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 16v-5a6 6 0 0112 0v5l1.5 2h-15L6 16z"/><path d="M10 20.5a2 2 0 004 0"/></svg></span><div><h3>New-mail notifications</h3><p>For Gmail, and also for Outlook/Microsoft 365, iCloud and IMAP — optional, via our notification server.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 13l3.5 3.5L13.5 9"/><path d="M11 16.5l.5.5L19 9.5"/></svg></span><div><h3>Read receipts</h3><p>Standard (MDN) and visible to the recipient — no tracking pixels.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c1-3 3.2-4.5 5.5-4.5s4.5 1.5 5.5 4.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5c2 0 3.8 1.2 4.5 3.5"/></svg></span><div><h3>Shared drafts and comments</h3><p>Write a&nbsp;message together with people you choose, through iCloud sharing.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span><div><h3>Ask</h3><p>Search by meaning, inside photos and scans (OCR), and in DOCX and XLSX documents — on the device; same requirements as the AI features (below).</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 00.5-7.97A6 6 0 006.1 9.2 4.5 4.5 0 007 18z"/></svg></span><div><h3>Large files as links</h3><p>The file goes from your iPhone to your Google Drive or OneDrive, and the message gets a&nbsp;link.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3l18 18"/><path d="M10.6 6.1c.5-.1.9-.1 1.4-.1 5 0 8.5 4.5 9.5 6-.5.8-1.6 2.3-3.2 3.6"/><path d="M6.3 7.8C4.6 9 3.3 10.8 2.5 12c1 1.5 4.5 6 9.5 6 1.4 0 2.7-.3 3.8-.9"/><path d="M9.9 9.9a3 3 0 004.2 4.2"/></svg></span><div><h3>Tracking-pixel protection</h3><p>Remote tracking images are blocked by default.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></svg></span><div><h3>Unsubscribe and block</h3><p>Leave a&nbsp;mailing list or block a&nbsp;sender right from the message.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="3.5"/><path d="M10.5 12.5L19 4M16 7l2.5 2.5M14 9l1.5 1.5"/></svg></span><div><h3>App lock</h3><p>Lock the app with Face ID.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19.5 12a7.5 7.5 0 11-2.2-5.3"/><path d="M19.5 4.5v4h-4"/></svg></span><div><h3>iCloud sync</h3><p>Pins, reminders, signatures and templates in your private iCloud — without mail content.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="5.5" width="16" height="14.5" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg></span><div><h3>Invitations</h3><p>Reply to a&nbsp;meeting invitation right from the message.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5l1.8 5.2 5.2 1.8-5.2 1.8-1.8 5.2-1.8-5.2L5 10.5l5.2-1.8z"/><path d="M18.5 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><div><h3>On-device AI and AI+</h3><p>Drafting, replies and thread summaries with Apple Intelligence on the device. For Polish, there's AI+ in the cloud — a&nbsp;paid add-on.</p></div></li>
+      <li><span class="fl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 5v14"/></svg></span><div><h3>Duo layout</h3><p>List and message side by side — a&nbsp;layout designed with a&nbsp;foldable iPhone in mind.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt" id="privacy">
+  <div class="wrap">
+        <div class="lang-pl" lang="pl">
+      <div class="section-head">
+        <h2>Prywatność wprost</h2>
+      </div>
+      <div class="prose">
+        <div class="callout"><p><strong>W&nbsp;skrócie:</strong> poczta zostaje na Twoim iPhonie. Nie mamy własnego serwera, który trzymałby kopię Twojej skrzynki.</p></div>
+        <p>Poczta jest pobierana bezpośrednio od dostawcy (Gmail, Microsoft, iCloud, IMAP) na Twój iPhone i&nbsp;przechowywana na urządzeniu. Hasła i&nbsp;tokeny kont trzyma pęk kluczy iOS (Keychain), podobnie jak klucz prywatny OpenPGP.</p>
+        <p><strong>Funkcje AI na urządzeniu</strong> (pisanie, odpowiedzi, podsumowania wątków, raport skrzynki, Ask) działają przez Apple Intelligence: wymagają iOS 26 lub nowszego, obsługiwanego urządzenia i&nbsp;języka obsługiwanego przez Apple Intelligence — polskiego na razie wśród nich nie ma. Kategorie skrzynki i&nbsp;Gatekeeper też są liczone na iPhonie, ale nie potrzebują Apple Intelligence i&nbsp;działają w&nbsp;każdym języku.</p>
+        <p><strong>AI+</strong> to płatny dodatek. Gdy go używasz, wybrany przez Ciebie tekst jest wysyłany do przetwarzania w&nbsp;chmurze. Kto przetwarza te dane i&nbsp;na jakich zasadach, opisuje polityka prywatności.</p>
+        <p><strong>Powiadomienia o&nbsp;nowej poczcie</strong> są opcjonalne i&nbsp;przechodzą przez nasz serwer powiadomień. Przy Gmailu serwer na chwilę odczytuje metadane nowej wiadomości — nadawcę, temat i&nbsp;krótki fragment — żeby dopasować je do Twoich ustawień i&nbsp;wysłać powiadomienie. Przy Outlooku/Microsoft 365, iCloud i&nbsp;IMAP serwer przechowuje zaszyfrowane dane logowania potrzebne do sprawdzania skrzynki i&nbsp;wysyła na iPhone'a tylko sygnał o&nbsp;nowej poczcie, a&nbsp;wiadomość pobiera już sama aplikacja. Serwer nie zapisuje treści Twojej poczty.</p>
+        <p><strong>Wysyłka zaplanowana z&nbsp;serwera</strong> jest opcjonalna: wiadomość czeka jako szkic w&nbsp;Twojej własnej skrzynce, a&nbsp;serwer w&nbsp;terminie wysyła ją przez Twojego dostawcę. Zapisuje tylko zaszyfrowane dane logowania konta i&nbsp;techniczne dane zadania, bez treści, tematu i&nbsp;adresatów.</p>
+        <p>Synchronizacja iCloud, wspólne szkice oraz pliki na Dysku Google i&nbsp;w&nbsp;OneDrive trafiają na Twoje własne konta w&nbsp;tych usługach — nie mamy do nich dostępu. Zdalne obrazki śledzące są domyślnie blokowane, a&nbsp;sama aplikacja nigdy ich nie dodaje.</p>
+        <p><a href="../privacy.html">Pełna polityka prywatności →</a></p>
+      </div>
+    </div>
+    <div class="lang-en" lang="en">
+      <div class="section-head">
+        <h2>Privacy, in plain terms</h2>
+      </div>
+      <div class="prose">
+        <div class="callout"><p><strong>In short:</strong> your mail stays on your iPhone. We have no server of our own that keeps a&nbsp;copy of your mailbox.</p></div>
+        <p>Mail is fetched directly from your provider (Gmail, Microsoft, iCloud, IMAP) to your iPhone and stored on the device. Passwords and account tokens live in the iOS keychain, and so does your OpenPGP private key.</p>
+        <p><strong>On-device AI features</strong> (drafting, replies, thread summaries, mailbox reports, Ask) use Apple Intelligence: they need iOS 26 or later, a&nbsp;supported device and a&nbsp;language Apple Intelligence supports — Polish isn't one of them yet. Inbox categories and Gatekeeper are also worked out on the iPhone, but they don't need Apple Intelligence and work in any language.</p>
+        <p><strong>AI+</strong> is a&nbsp;paid add-on. When you use it, the text you choose is sent to the cloud for processing. The privacy policy explains who processes it and how.</p>
+        <p><strong>New-mail notifications</strong> are optional and go through our notification server. For Gmail, the server briefly reads the new message's metadata — sender, subject and a&nbsp;short snippet — to match it against your settings and send the notification. For Outlook/Microsoft 365, iCloud and IMAP, the server keeps the encrypted sign-in data it needs to check your mailbox and only sends your iPhone a&nbsp;signal that new mail has arrived; the app then fetches the message itself. The server does not store your mail content.</p>
+        <p><strong>Scheduled sending from our server</strong> is optional: the message waits as a&nbsp;draft in your own mailbox, and the server sends it on time through your provider. It stores only the account's encrypted sign-in data and technical job data — no content, subject or recipients.</p>
+        <p>iCloud sync, shared drafts and files in Google Drive and OneDrive go to your own accounts with those services — we have no access to them. Remote tracking images are blocked by default, and the app itself never adds them.</p>
+        <p><a href="../privacy.html">Full privacy policy →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="wrap">
+        <div class="section-head">
+      <h2 class="lang-pl" lang="pl"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88l45.63-68.44A8,8,0,0,0,246.66,123.56ZM187.72,192H40V64H187.72l42.66,64Z"/></svg>Cennik</h2>
+      <h2 class="lang-en" lang="en"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88l45.63-68.44A8,8,0,0,0,246.66,123.56ZM187.72,192H40V64H187.72l42.66,64Z"/></svg>Pricing</h2>
+      <p class="lang-pl" lang="pl"><span class="product-copy">Obowiązuje od wersji 1.0 Aorum <span class="product-name">Mail</span>. Zacznij od tygodnia za darmo.</span></p>
+      <p class="lang-en" lang="en"><span class="product-copy">Applies from Aorum <span class="product-name">Mail</span> 1.0. Start with a&nbsp;free week.</span></p>
+    </div>
+    <div class="grid grid--3">
+      <article class="card price-card price-card--featured">
+        <div class="price-card__head">
+          <h3><span class="product-copy">Aorum <span class="product-name">Mail</span> Pro</span></h3>
+          <span class="badge badge--live"><span class="lang-pl" lang="pl">Tydzień za darmo</span><span class="lang-en" lang="en">Free week</span></span>
+        </div>
+        <div class="lang-pl" lang="pl">
+          <p class="price">9,99&nbsp;USD <small>/ mies.</small></p>
+          <p class="price-alt">albo 79,99&nbsp;USD / rok</p>
+          <ul class="check-list">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Tydzień próbny za darmo</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Cała aplikacja (AI+ osobno)</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Na wszystkich Twoich urządzeniach - dziś iPhone; iPad, Mac i&nbsp;wersja w&nbsp;przeglądarce wkrótce</span></li>
+          </ul>
+        </div>
+        <div class="lang-en" lang="en">
+          <p class="price">$9.99 <small>/ month</small></p>
+          <p class="price-alt">or $79.99 / year</p>
+          <ul class="check-list">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>One-week free trial</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>The whole app (AI+ is separate)</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>On all your devices - iPhone today; iPad, Mac and web coming soon</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card price-card">
+        <div class="price-card__head">
+          <h3>AI+</h3>
+          <span class="badge"><span class="lang-pl" lang="pl">Dodatek do Pro</span><span class="lang-en" lang="en">Pro add-on</span></span>
+        </div>
+        <div class="lang-pl" lang="pl">
+          <p class="price">+9,99&nbsp;USD <small>/ mies.</small></p>
+          <p class="price-alt">do subskrypcji Pro</p>
+          <ul class="check-list">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>300 kredytów miesięcznie, pasek zużycia w&nbsp;aplikacji</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>AI w&nbsp;chmurze, także po polsku</span></li>
+          </ul>
+          <p class="card__foot">AI na urządzeniu działa bez dopłaty przez Apple Intelligence, w&nbsp;obsługiwanych przez nie językach.</p>
+        </div>
+        <div class="lang-en" lang="en">
+          <p class="price">+$9.99 <small>/ month</small></p>
+          <p class="price-alt">on top of Pro</p>
+          <ul class="check-list">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>300 credits a&nbsp;month, with a&nbsp;usage bar in the app</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Cloud AI, including Polish</span></li>
+          </ul>
+          <p class="card__foot">On-device AI works at no extra cost through Apple Intelligence, in the languages it supports.</p>
+        </div>
+      </article>
+
+      <article class="card price-card">
+        <div class="price-card__head">
+          <h3><span class="product-copy">Aorum <span class="product-name">One</span></span></h3>
+          <span class="badge"><span class="lang-pl" lang="pl">Wkrótce</span><span class="lang-en" lang="en">Coming soon</span></span>
+        </div>
+        <div class="lang-pl" lang="pl">
+          <p><span class="product-copy">Jeden pakiet na cały Aorum <span class="product-name">Workspace</span> - Mail, Files, Plan i&nbsp;Projects. Szczegóły i&nbsp;cenę podamy, zanim pakiet będzie dostępny.</span></p>
+        </div>
+        <div class="lang-en" lang="en">
+          <p><span class="product-copy">One plan for the whole Aorum <span class="product-name">Workspace</span> - Mail, Files, Plan and Projects. We'll share the details and price before it's available.</span></p>
+        </div>
+      </article>
+    </div>
+    <p class="section-note lang-pl" lang="pl">Ceny w&nbsp;USD; App Store pokazuje cenę w&nbsp;Twojej walucie. Subskrypcja odnawia się automatycznie, możesz ją anulować w&nbsp;ustawieniach Apple ID.</p>
+    <p class="section-note lang-en" lang="en">Prices in USD; the App Store shows the price in your currency. The subscription renews automatically, and you can cancel it in your Apple ID settings.</p>
+  </div>
+</section>
+
+<section class="section section--alt" id="compare">
+  <div class="wrap">
+                <div class="lang-pl" lang="pl">
+      <div class="section-head">
+        <h2><span class="product-copy">Aorum <span class="product-name">Mail</span> a&nbsp;Spark, Apple Mail, Gmail, Outlook i&nbsp;Proton Mail</span></h2>
+        <p><span class="product-copy">Porównanie 26 funkcji aplikacji pocztowych na iPhone'a. Pokazujemy też, czego Aorum <span class="product-name">Mail</span> jeszcze nie ma.</span></p>
+      </div>
+      <ul class="legend" aria-label="Legenda"><li><span class="mark mark--yes">✓</span> jest</li><li><span class="mark mark--part">◐</span> częściowo</li><li><span class="mark mark--no">✕</span> brak</li><li><span class="mark mark--unk">?</span> brak potwierdzenia w&nbsp;oficjalnych źródłach</li></ul>
+      <p class="scroll-hint">Tabelę przewiniesz w&nbsp;bok.</p>
+      <div class="table-scroll" role="region" aria-label="Tabela porównania (przewijana w poziomie)" tabindex="0">
+<table class="compare">
+  <caption><span class="product-copy">Porównanie funkcji Aorum <span class="product-name">Mail</span> z&nbsp;innymi aplikacjami pocztowymi na iPhone'a (stan na 29 września 2026)</span></caption>
+  <thead>
+    <tr>
+      <th scope="col">Funkcja</th>
+      <th scope="col" class="col-aorum"><span class="product-copy">Aorum <span class="product-name">Mail</span></span></th>
+      <th scope="col">Spark</th>
+      <th scope="col">Apple Mail</th>
+      <th scope="col">Gmail</th>
+      <th scope="col">Outlook</th>
+      <th scope="col">Proton Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">Wiele kont, wspólna skrzynka</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td></tr>
+    <tr><th scope="row">Kategorie uczące się</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">4 kategorie + nauka</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span><span class="cell-note">Smart Inbox</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td></tr>
+    <tr><th scope="row">Gatekeeper (nowi nadawcy)</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td></tr>
+    <tr><th scope="row">Odłożenie maila</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td></tr>
+    <tr><th scope="row">Przypomnienie o&nbsp;braku odpowiedzi</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td></tr>
+    <tr><th scope="row">Wypisanie i&nbsp;blokada</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span><span class="cell-note">tylko blokada</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td></tr>
+    <tr><th scope="row">Reguły z&nbsp;telefonu</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td></tr>
+    <tr><th scope="row">Autoodpowiedź z&nbsp;telefonu</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td></tr>
+    <tr><th scope="row">Cofnięcie wysyłki</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">5–60 s</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">5 s</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td></tr>
+    <tr><th scope="row">Wysyłka zaplanowana z&nbsp;serwera</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td></tr>
+    <tr><th scope="row">Powiadomienia dla każdego konta</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">przez nasz serwer powiadomień</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span><span class="cell-note">tylko Gmail</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span><span class="cell-note">tylko Proton</span></td></tr>
+    <tr><th scope="row">Potwierdzenia przeczytania</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">MDN</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">w&nbsp;Pro</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td></tr>
+    <tr><th scope="row">Duże załączniki jako link</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">Dysk Google / OneDrive</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">Spark Cloud</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">Mail Drop</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td></tr>
+    <tr><th scope="row">Szyfrowanie</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">OpenPGP + S/MIME</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span><span class="cell-note">S/MIME</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span><span class="cell-note">firmowe</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span><span class="cell-note">S/MIME</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">OpenPGP</span></td></tr>
+    <tr><th scope="row">Wspólne szkice i&nbsp;komentarze</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">w&nbsp;Pro</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td></tr>
+    <tr><th scope="row">AI: szkic i&nbsp;podsumowanie</th><td class="col-aorum"><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span><span class="cell-note">na urządzeniu, bez polskiego</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">z&nbsp;limitem</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span><span class="cell-note">na iOS</span></td></tr>
+    <tr><th scope="row">Pytania do skrzynki</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">Ask</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">AI Assistant</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td></tr>
+    <tr><th scope="row">Osoby i&nbsp;historia kontaktu</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td></tr>
+    <tr><th scope="row">Centrum załączników</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td></tr>
+    <tr><th scope="row">Pulpit (sprawy, fokus, triage)</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">nie</span></td></tr>
+    <tr><th scope="row">Ochrona przed pikselami śledzącymi</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td></tr>
+    <tr><th scope="row">Blokada aplikacji</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td></tr>
+    <tr><th scope="row">Stan między urządzeniami</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">iCloud</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td></tr>
+    <tr><th scope="row">Kalendarz</th><td class="col-aorum"><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span><span class="cell-note">odpowiedź na zaproszenie</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span></td></tr>
+    <tr><th scope="row">Platformy</th><td class="col-aorum"><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">częściowo</span><span class="cell-note">iPhone</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">6</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span><span class="cell-note">4</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td></tr>
+    <tr><th scope="row">Układ dwupanelowy na składany iPhone (Duo)</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">tak</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">brak danych</span></td></tr>
+  </tbody>
+  <tfoot>
+    <tr><th scope="row">Liczba ocen „tak” (na 26 funkcji)</th><td class="col-aorum">23</td><td>15</td><td>12</td><td>11</td><td>12</td><td>10</td></tr>
+  </tfoot>
+</table>
+      </div>
+      <div class="grid grid--2 after-table">
+        <div class="card">
+          <h3><span class="product-copy">Czego Aorum <span class="product-name">Mail</span> jeszcze nie ma</span></h3>
+          <ul class="plain-list">
+            <li><strong>Innych platform.</strong> Na razie tylko iPhone; iPad, Mac i&nbsp;wersja w&nbsp;przeglądarce są w&nbsp;przygotowaniu.</li>
+            <li><strong>Własnego kalendarza.</strong><span class="product-copy"> W&nbsp;poczcie odpowiesz na zaproszenie; osobna aplikacja Aorum <span class="product-name">Plan</span> jest w&nbsp;przygotowaniu.</span></li>
+            <li><strong>AI na urządzeniu po polsku.</strong> Apple Intelligence nie obsługuje jeszcze polskiego; po polsku działa AI+ w&nbsp;chmurze (płatny dodatek).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Jak czytać tę tabelę</h3>
+          <ul class="plain-list">
+            <li>Porównanie liczy obecność funkcji, nie ich jakość ani niezawodność.</li>
+            <li>„?” oznacza brak potwierdzenia w&nbsp;oficjalnych materiałach, a&nbsp;nie brak funkcji.</li>
+            <li>Stan na 29 września 2026, na podstawie publicznych materiałów producentów; funkcje konkurencji mogą się zmienić.</li>
+            <li>Spark, Apple Mail, Gmail, Outlook i&nbsp;Proton Mail są znakami towarowymi ich właścicieli.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lang-en" lang="en">
+      <div class="section-head">
+        <h2><span class="product-copy">Aorum <span class="product-name">Mail</span> vs Spark, Apple Mail, Gmail, Outlook and Proton Mail</span></h2>
+        <p><span class="product-copy">A&nbsp;look at 26 features across iPhone email apps — including what Aorum <span class="product-name">Mail</span> doesn't have yet.</span></p>
+      </div>
+      <ul class="legend" aria-label="Legend"><li><span class="mark mark--yes">✓</span> yes</li><li><span class="mark mark--part">◐</span> partly</li><li><span class="mark mark--no">✕</span> no</li><li><span class="mark mark--unk">?</span> not confirmed by official sources</li></ul>
+      <p class="scroll-hint">Scroll the table sideways.</p>
+      <div class="table-scroll" role="region" aria-label="Comparison table (scrolls horizontally)" tabindex="0">
+<table class="compare">
+  <caption><span class="product-copy">Aorum <span class="product-name">Mail</span> compared with other iPhone email apps (as of 29 September 2026)</span></caption>
+  <thead>
+    <tr>
+      <th scope="col">Feature</th>
+      <th scope="col" class="col-aorum"><span class="product-copy">Aorum <span class="product-name">Mail</span></span></th>
+      <th scope="col">Spark</th>
+      <th scope="col">Apple Mail</th>
+      <th scope="col">Gmail</th>
+      <th scope="col">Outlook</th>
+      <th scope="col">Proton Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">Multiple accounts, unified inbox</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td></tr>
+    <tr><th scope="row">Learning categories</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">4 categories + learning</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span><span class="cell-note">Smart Inbox</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td></tr>
+    <tr><th scope="row">Gatekeeper (new senders)</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td></tr>
+    <tr><th scope="row">Snooze</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td></tr>
+    <tr><th scope="row">Reminder when there's no reply</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td></tr>
+    <tr><th scope="row">Unsubscribe and block</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span><span class="cell-note">block only</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td></tr>
+    <tr><th scope="row">Rules from the phone</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td></tr>
+    <tr><th scope="row">Auto-reply from the phone</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td></tr>
+    <tr><th scope="row">Undo send</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">5–60 s</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">5 s</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td></tr>
+    <tr><th scope="row">Scheduled sending from a&nbsp;server</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td></tr>
+    <tr><th scope="row">Notifications for every account</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">via our notification server</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span><span class="cell-note">Gmail only</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span><span class="cell-note">Proton only</span></td></tr>
+    <tr><th scope="row">Read receipts</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">MDN</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">in Pro</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td></tr>
+    <tr><th scope="row">Large attachments as a&nbsp;link</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">Google Drive / OneDrive</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">Spark Cloud</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">Mail Drop</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td></tr>
+    <tr><th scope="row">Encryption</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">OpenPGP + S/MIME</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span><span class="cell-note">S/MIME</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span><span class="cell-note">business plans</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span><span class="cell-note">S/MIME</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">OpenPGP</span></td></tr>
+    <tr><th scope="row">Shared drafts and comments</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">in Pro</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td></tr>
+    <tr><th scope="row">AI: drafts and summaries</th><td class="col-aorum"><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span><span class="cell-note">on device, no Polish</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">with a&nbsp;limit</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span><span class="cell-note">on iOS</span></td></tr>
+    <tr><th scope="row">Questions to your mailbox</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">Ask</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">AI Assistant</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td></tr>
+    <tr><th scope="row">People and contact history</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td></tr>
+    <tr><th scope="row">Attachments hub</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td></tr>
+    <tr><th scope="row">Dashboard (to-dos, focus, triage)</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td><td><span class="mark mark--no" aria-hidden="true">✕</span><span class="visually-hidden">no</span></td></tr>
+    <tr><th scope="row">Tracking-pixel protection</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td></tr>
+    <tr><th scope="row">App lock</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td></tr>
+    <tr><th scope="row">State across devices</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">iCloud</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td></tr>
+    <tr><th scope="row">Calendar</th><td class="col-aorum"><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span><span class="cell-note">reply to invitations</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span></td></tr>
+    <tr><th scope="row">Platforms</th><td class="col-aorum"><span class="mark mark--part" aria-hidden="true">◐</span><span class="visually-hidden">partly</span><span class="cell-note">iPhone</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">6</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span><span class="cell-note">4</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td></tr>
+    <tr><th scope="row">Two-pane layout for a&nbsp;foldable iPhone (Duo)</th><td class="col-aorum"><span class="mark mark--yes" aria-hidden="true">✓</span><span class="visually-hidden">yes</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td><td><span class="mark mark--unk" aria-hidden="true">?</span><span class="visually-hidden">not confirmed</span></td></tr>
+  </tbody>
+  <tfoot>
+    <tr><th scope="row">Number of “yes” ratings (out of 26)</th><td class="col-aorum">23</td><td>15</td><td>12</td><td>11</td><td>12</td><td>10</td></tr>
+  </tfoot>
+</table>
+      </div>
+      <div class="grid grid--2 after-table">
+        <div class="card">
+          <h3><span class="product-copy">What Aorum <span class="product-name">Mail</span> doesn't have yet</span></h3>
+          <ul class="plain-list">
+            <li><strong>Other platforms.</strong> iPhone only for now; iPad, Mac and a&nbsp;web version are in the works.</li>
+            <li><strong>Its own calendar.</strong><span class="product-copy"> You can reply to invitations in your mail; a&nbsp;separate Aorum <span class="product-name">Plan</span> app is in the works.</span></li>
+            <li><strong>On-device AI in Polish.</strong> Apple Intelligence doesn't support Polish yet; AI+ in the cloud does (a&nbsp;paid add-on).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>How to read this table</h3>
+          <ul class="plain-list">
+            <li>It counts whether a&nbsp;feature exists, not how well it works.</li>
+            <li>“?” means we found no confirmation in official materials — not that the feature is missing.</li>
+            <li>As of 29 September 2026, based on the makers' public materials; competitors' features may change.</li>
+            <li>Spark, Apple Mail, Gmail, Outlook and Proton Mail are trademarks of their respective owners.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="lang-pl faq" lang="pl">
+      <div class="section-head">
+        <h2>Najczęstsze pytania</h2>
+      </div>
+      <details>
+        <summary><span class="product-copy">Jakie konta obsługuje Aorum <span class="product-name">Mail</span>?</span></summary>
+        <p>Gmail, Outlook/Microsoft 365, iCloud Mail oraz dowolne konto IMAP/SMTP.</p>
+      </details>
+      <details>
+        <summary>Czy moja poczta trafia na Wasze serwery?</summary>
+        <p>Nie. Poczta jest pobierana prosto od dostawcy na Twój iPhone i&nbsp;przechowywana na urządzeniu. Wyjątki są opcjonalne: przy powiadomieniach z&nbsp;Gmaila nasz serwer na chwilę odczytuje nadawcę, temat i&nbsp;krótki fragment nowej wiadomości, a&nbsp;przy Outlooku, iCloud i&nbsp;IMAP tylko sprawdza, czy przyszła nowa poczta — w&nbsp;obu przypadkach nie zapisuje treści. Przy wysyłce zaplanowanej z&nbsp;serwera wiadomość czeka jako szkic w&nbsp;Twojej skrzynce u&nbsp;dostawcy. Przy AI+ wybrany tekst jest przetwarzany w&nbsp;chmurze. Szczegóły w <a href="../privacy.html">polityce prywatności</a>.</p>
+      </details>
+      <details>
+        <summary>Czy AI działa po polsku?</summary>
+        <p>AI na urządzeniu działa przez Apple Intelligence, które nie obsługuje jeszcze polskiego. Po polsku działa AI+ — płatny dodatek do Pro, który przetwarza wybrany tekst w&nbsp;chmurze.</p>
+      </details>
+      <details>
+        <summary>Czy jest wersja na iPada albo Maca?</summary>
+        <p>Na razie tylko iPhone. Wersje na iPada, Maca i&nbsp;do przeglądarki są w&nbsp;przygotowaniu, a&nbsp;subskrypcja Pro obejmie wszystkie urządzenia.</p>
+      </details>
+      <details>
+        <summary>Dlaczego Google ostrzega przy logowaniu do Gmaila?</summary>
+        <p><span class="product-copy">Aorum <span class="product-name">Mail</span> czeka na zakończenie weryfikacji przez Google. Do tego czasu ekran logowania Google pokazuje ostrzeżenie o&nbsp;niezweryfikowanej aplikacji, a&nbsp;połączyć można tylko ograniczoną liczbę kont Gmail (najwyżej 100). Szczegóły na stronie </span><a href="../support.html">wsparcia</a>.</p>
+      </details>
+      <details>
+        <summary><span class="product-copy">Czy Aorum <span class="product-name">Mail</span> jest płatny?</span></summary>
+        <p><span class="product-copy">Tak — Aorum <span class="product-name">Mail</span> działa w&nbsp;subskrypcji Pro: 9,99 USD miesięcznie albo 79,99 USD rocznie, z&nbsp;tygodniem próbnym za darmo. AI+ to opcjonalny dodatek za 9,99 USD miesięcznie. App Store pokazuje cenę w&nbsp;Twojej walucie; subskrypcję anulujesz w&nbsp;ustawieniach Apple ID.</span></p>
+      </details>
+    </div>
+    <div class="lang-en faq" lang="en">
+      <div class="section-head">
+        <h2>Frequently asked questions</h2>
+      </div>
+      <details>
+        <summary>Which email accounts are supported?</summary>
+        <p>Gmail, Outlook/Microsoft 365, iCloud Mail, and any IMAP/SMTP account.</p>
+      </details>
+      <details>
+        <summary>Does my mail end up on your servers?</summary>
+        <p>No. Mail comes straight from your provider to your iPhone and is stored on the device. The exceptions are optional: for Gmail notifications, our server briefly reads the sender, subject and a&nbsp;short snippet of a&nbsp;new message; for Outlook, iCloud and IMAP, it only checks whether new mail has arrived — and in both cases it doesn't store the content. With scheduled sending from our server, the message waits as a&nbsp;draft in your mailbox with your provider. With AI+, the text you choose is processed in the cloud. See the <a href="../privacy.html">privacy policy</a> for details.</p>
+      </details>
+      <details>
+        <summary>Does the AI work in Polish?</summary>
+        <p>On-device AI uses Apple Intelligence, which doesn't support Polish yet. For Polish, there's AI+ — a&nbsp;paid Pro add-on that processes the text you choose in the cloud.</p>
+      </details>
+      <details>
+        <summary>Is there an iPad or Mac version?</summary>
+        <p>iPhone only for now. iPad, Mac and web versions are in the works, and a&nbsp;Pro subscription will cover all your devices.</p>
+      </details>
+      <details>
+        <summary>Why does Google show a&nbsp;warning when I&nbsp;sign in to Gmail?</summary>
+        <p><span class="product-copy">Aorum <span class="product-name">Mail</span> is waiting for Google to complete its verification. Until then, Google's sign-in screen shows an “unverified app” warning, and only a&nbsp;limited number of Gmail accounts (at most 100) can connect. See the </span><a href="../support.html">support page</a> for details.</p>
+      </details>
+      <details>
+        <summary><span class="product-copy">Does Aorum <span class="product-name">Mail</span> cost anything?</span></summary>
+        <p><span class="product-copy">Yes — Aorum <span class="product-name">Mail</span> runs on a&nbsp;Pro subscription: $9.99 a&nbsp;month or $79.99 a&nbsp;year, with a&nbsp;one-week free trial. AI+ is an optional add-on at $9.99 a&nbsp;month. The App Store shows the price in your currency; you can cancel in your Apple ID settings.</span></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="footer-about">
+      <a class="brand brand--workspace" href="../index.html"><picture><source media="(max-width: 1040px)" srcset="../assets/aorum-wordmark-workspace-v8-dark.svg?v=832a82b53ed2" width="633" height="153"><img src="../assets/aorum-workspace-logo-v8-dark.svg?v=c198df8adf02" alt="Aorum Workspace" width="633" height="214"></picture></a>
+      <p class="footer-tagline"><span class="lang-pl" lang="pl">Kompletne środowisko pracy dla profesjonalistów. W&nbsp;eleganckim wydaniu.</span><span class="lang-en" lang="en">The complete workspace for professionals. Elegantly crafted.</span></p>
+    </div>
+    <nav aria-label="Aplikacje Aorum / Aorum apps">
+      <p class="footer-h"><span class="lang-pl" lang="pl">Aplikacje</span><span class="lang-en" lang="en">Apps</span></p>
+      <ul>
+        <li><a class="footer-app-link" href="../mail/index.html"><img src="../assets/aorum-mail-icon.png?v=5b5c8e3285fb" alt="" width="24" height="24" loading="lazy"><span class="product-copy">Aorum <span class="product-name">Mail</span></span></a></li>
+        <li><a class="footer-app-link" href="../files/index.html"><img src="../assets/aorum-files-icon.png?v=b34d423bf86b" alt="" width="24" height="24" loading="lazy"><span class="product-copy">Aorum <span class="product-name">Files</span></span></a></li>
+        <li><a class="footer-app-link" href="../calendar/index.html"><img src="../assets/aorum-calendar-icon.png?v=64d8c53612d8" alt="" width="24" height="24" loading="lazy"><span class="product-copy">Aorum <span class="product-name">Plan</span></span></a></li>
+        <li><a class="footer-app-link" href="../projects/index.html"><img src="../assets/aorum-projects-icon.png?v=ed17d9c58921" alt="" width="24" height="24" loading="lazy"><span class="product-copy">Aorum <span class="product-name">Projects</span></span></a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Informacje / Information">
+      <p class="footer-h"><span class="lang-pl" lang="pl">Informacje</span><span class="lang-en" lang="en">Information</span></p>
+      <ul>
+        <li><a class="footer-info-link" href="../index.html#pricing"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88l45.63-68.44A8,8,0,0,0,246.66,123.56ZM187.72,192H40V64H187.72l42.66,64Z"/></svg><span class="lang-pl" lang="pl">Cennik</span><span class="lang-en" lang="en">Pricing</span></a></li>
+        <li><a class="footer-info-link" href="../privacy.html"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg><span class="lang-pl" lang="pl">Prywatność</span><span class="lang-en" lang="en">Privacy</span></a></li>
+        <li><a class="footer-info-link" href="../terms.html"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg><span class="lang-pl" lang="pl">Regulamin</span><span class="lang-en" lang="en">Terms</span></a></li>
+        <li><a class="footer-info-link" href="../support.html"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><span class="lang-pl" lang="pl">Pomoc</span><span class="lang-en" lang="en">Support</span></a></li>
+        <li><a class="footer-info-link" href="mailto:support@aorum.app"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></svg>support@aorum.app</a></li>
+      </ul>
+    </nav>
+    <p class="footer-legal">© 2026 Vansa Sp. z&nbsp;o.o., ul. Jana Smolenia 14, 30-864 Kraków (KRS 0000675425, NIP 6793148076)</p>
+  </div>
+</footer>
+<template id="icon-viewer-zoom"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></template>
+<template id="icon-viewer-fit"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a96,96,0,0,1-94.71,96H128A95.38,95.38,0,0,1,62.1,197.8a8,8,0,0,1,11-11.63A80,80,0,1,0,71.43,71.39a3.07,3.07,0,0,1-.26.25L44.59,96H72a8,8,0,0,1,0,16H24a8,8,0,0,1-8-8V56a8,8,0,0,1,16,0V85.8L60.25,60A96,96,0,0,1,224,128Z"/></svg></template>
+<template id="icon-viewer-next"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></template>
+<template id="icon-viewer-close"><svg width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></template>
+</body>
+</html>
