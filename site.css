@@ -1926,6 +1926,9 @@ body:has(main > .hero--product:first-child) main > .section { padding-top: 40px;
 @media (min-width: 1041px) {
   .intro > .intro__text:first-child h1,
   .intro h1 { font-size: clamp(1.6rem, 9.6cqw, 3.685rem); }
-  .site-header .site-nav a { width: 50%; margin-inline: auto; padding-inline: 4px; }
+  .site-header .site-nav a { display: flex; width: 50%; margin-inline: auto; padding-inline: 4px; }
 }
 @media (min-width: 761px) { #intro-title-pl .intro-title-line { white-space: nowrap; } }
+
+/* 2026-09-30 round 9: every caption under a screenshot is centred. */
+.duo-shot figcaption, .duo-showcase .duo-shot figcaption { text-align: center; }
