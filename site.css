@@ -1949,3 +1949,29 @@ body:has(main > .hero--product:first-child) main > .section { padding-top: 40px;
   html.nav-anim .site-header__inner { transition: transform .35s ease; }
   html.nav-anim .site-header .brand--workspace { transition: opacity .25s ease, visibility .25s; }
 }
+
+/* 2026-09-30 (round 11): first screen on desktop. The hero logo keeps the image's top edge;
+   the left column is a little tighter so the "iPhone, iOS 18.5" note shares its line with the
+   caption under Duo (same size, both at the bottom of the row); app icons are 25% larger
+   until the page scrolls past the hero (the PL/EN switch keeps its size). */
+@media (min-width: 1041px) {
+  .intro > .intro__text:first-child { align-self: stretch; display: flex; flex-direction: column; }
+  .intro > .intro__text:first-child > .lang-pl,
+  .intro > .intro__text:first-child > .lang-en { display: flex; flex-direction: column; flex: 1 1 auto; }
+  .intro__brand { margin-bottom: 18px; }
+  .intro > .intro__text:first-child h1 { line-height: 1.15; }
+  .intro > .intro__text:first-child .intro__lead { margin-top: 24px; }
+  .intro > .intro__text:first-child .intro__benefit + .intro__lead { margin-top: 10px; }
+  .intro > .intro__text:first-child .btn-row { margin-top: 20px; gap: 12px; }
+  .intro > .intro__text:first-child .btn { padding-block: 10px; }
+  .intro > .intro__text:first-child .intro__note { margin-top: auto; padding-top: 10px; font-size: .9775rem; line-height: 1.65; }
+  /* When the text column is the taller one (narrower windows), the caption drops to the note's line. */
+  .intro > .intro__stage { align-self: stretch; display: flex; flex-direction: column; }
+  .intro > .intro__stage > .intro__caption { margin-top: auto; padding-top: 18px; width: 100%; }
+  html:not(.past-hero) body:has(.intro) .site-header .nav-app-icon { width: 30px; height: 30px; }
+  html:not(.past-hero) body:has(.intro) .site-header .site-nav a svg { width: 25px; height: 25px; }
+}
+@media (min-width: 1041px) and (prefers-reduced-motion: no-preference) {
+  html.nav-anim .site-header .nav-app-icon,
+  html.nav-anim .site-header .site-nav a svg { transition: width .35s ease, height .35s ease; }
+}
