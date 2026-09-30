@@ -116,3 +116,30 @@
     if (opener) opener.focus();
   });
 })();
+
+/* Home page, wide screens: while the hero logo is on screen the right-hand column hides its own
+   logo and moves up so the Mail icon lines up with the top of the Duo screenshot; once the hero
+   logo scrolls away the column returns to logo + icons. Without JavaScript the hero layout stays. */
+(function () {
+  'use strict';
+  var brand = document.querySelector('.intro__brand');
+  if (!brand) return;
+  var root = document.documentElement;
+  var pending = false;
+  function update() {
+    pending = false;
+    root.classList.toggle('past-hero', brand.getBoundingClientRect().bottom <= 0);
+  }
+  function schedule() {
+    if (!pending) { pending = true; window.requestAnimationFrame(update); }
+  }
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  window.addEventListener('hashchange', schedule);
+  window.addEventListener('load', schedule);
+  update();
+  // Animate only real scrolling, not the first placement after load.
+  window.requestAnimationFrame(function () {
+    window.requestAnimationFrame(function () { root.classList.add('nav-anim'); });
+  });
+}());

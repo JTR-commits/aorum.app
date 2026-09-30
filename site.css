@@ -1932,3 +1932,20 @@ body:has(main > .hero--product:first-child) main > .section { padding-top: 40px;
 
 /* 2026-09-30 round 9: every caption under a screenshot is centred. */
 .duo-shot figcaption, .duo-showcase .duo-shot figcaption { text-align: center; }
+
+/* 2026-09-30 round 10: on the first screen of the home page the logo sits above the headline and
+   the Mail icon lines up with the top of the Duo screenshot; after scrolling past it the right
+   column shows logo + icons again (class "past-hero" set by site-interactions.js). */
+.intro__brand { display: none; }
+@media (min-width: 1041px) {
+  .intro__brand { display: block; width: 200px; margin: 0 0 28px; }
+  .intro__brand img { display: block; width: 100%; height: auto; }
+  body:has(.intro) .site-header .brand--workspace { opacity: 0; visibility: hidden; }
+  body:has(.intro) .site-header__inner { transform: translateY(-94px); }
+  html.past-hero body:has(.intro) .site-header .brand--workspace { opacity: 1; visibility: visible; }
+  html.past-hero body:has(.intro) .site-header__inner { transform: none; }
+}
+@media (min-width: 1041px) and (prefers-reduced-motion: no-preference) {
+  html.nav-anim .site-header__inner { transition: transform .35s ease; }
+  html.nav-anim .site-header .brand--workspace { transition: opacity .25s ease, visibility .25s; }
+}
