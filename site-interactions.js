@@ -143,3 +143,72 @@
     window.requestAnimationFrame(function () { root.classList.add('nav-anim'); });
   });
 }());
+
+/* 2026-10-04: "Notify me at launch" form (Site-tools/build.py, launch_form). Without JavaScript
+   the form still posts and the service answers with a plain bilingual page. */
+(function () {
+  'use strict';
+  var forms = document.querySelectorAll('[data-launch-form]');
+  if (!forms.length || !window.fetch) return;
+  var emailPattern = /^[^\s@<>()[\]\\,;:"]{1,64}@(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/i;
+  Array.prototype.forEach.call(forms, function (form) {
+    var email = form.querySelector('input[name="email"]');
+    var consent = form.querySelector('input[name="consent"]');
+    var trap = form.querySelector('input[name="website"]');
+    var status = form.querySelector('.launch-form__status');
+    var button = form.querySelector('button[type="submit"]');
+    var page = form.querySelector('input[name="page"]');
+    if (page && /^\/mail\/?/.test(window.location.pathname)) page.value = '/mail/';
+    function show(state, key) {
+      status.setAttribute('data-state', state);
+      status.textContent = form.getAttribute('data-msg-' + key) || '';
+    }
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var value = email.value.trim();
+      email.removeAttribute('aria-invalid');
+      if (!emailPattern.test(value) || value.length > 254) {
+        email.setAttribute('aria-invalid', 'true');
+        show('error', 'invalid');
+        email.focus();
+        return;
+      }
+      if (!consent.checked) {
+        show('error', 'need-consent');
+        consent.focus();
+        return;
+      }
+      button.disabled = true;
+      show('busy', 'busy');
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: value,
+          consent: true,
+          lang: form.querySelector('input[name="lang"]').value,
+          page: page ? page.value : '/',
+          website: trap ? trap.value : ''
+        }),
+        credentials: 'omit',
+        mode: 'cors'
+      }).then(function (response) {
+        return response.json().catch(function () { return {}; }).then(function (body) {
+          if (response.ok && body.ok) {
+            form.setAttribute('data-done', '');
+            show('ok', 'ok');
+            return;
+          }
+          if (body.error === 'invalid_email') { email.setAttribute('aria-invalid', 'true'); show('error', 'invalid'); }
+          else if (body.error === 'consent_required') show('error', 'need-consent');
+          else if (response.status === 429) show('error', 'limit');
+          else show('error', 'error');
+        });
+      }).catch(function () {
+        show('error', 'error');
+      }).then(function () {
+        button.disabled = false;
+      });
+    });
+  });
+}());
