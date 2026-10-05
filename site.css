@@ -1975,3 +1975,57 @@ body:has(main > .hero--product:first-child) main > .section { padding-top: 40px;
   html.nav-anim .site-header .nav-app-icon,
   html.nav-anim .site-header .site-nav a svg { transition: width .35s ease, height .35s ease; }
 }
+
+/* 2026-10-04: "Notify me at launch" form in the first section of the home and Mail pages,
+   shown only until the App Store button returns (Site-tools/build.py, LAUNCH_FORM_ENDPOINT). */
+.launch-form {
+  margin: 28px 0 0;
+  padding: 20px;
+  max-width: 34rem;
+  text-align: left;
+  background: var(--surface-2);
+  border: 1px solid var(--subtle-border);
+}
+.launch-form__title { margin: 0 0 4px; color: var(--text); font-weight: 600; font-size: 1.05rem; }
+.launch-form__lead { margin: 0 0 14px; color: var(--text-secondary); font-size: .9rem; line-height: 1.5; }
+.launch-form__row { display: flex; flex-wrap: wrap; gap: 10px; }
+.launch-form__input {
+  flex: 1 1 14rem;
+  min-width: 0;
+  min-height: 48px;
+  padding: 10px 14px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--separator);
+  border-radius: 0;
+}
+.launch-form__input::placeholder { color: var(--text-muted); opacity: 1; }
+.launch-form__input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent-stroke); }
+.launch-form__input[aria-invalid="true"] { border-color: var(--accent); }
+.launch-form .launch-form__submit { flex: 0 0 auto; width: auto; justify-content: center; padding: 10px 20px; cursor: pointer; font-family: inherit; }
+.launch-form .launch-form__submit[disabled] { opacity: .7; cursor: progress; }
+.launch-form__consent { display: flex; align-items: flex-start; gap: 10px; margin-top: 14px; color: var(--text-secondary); font-size: .8125rem; line-height: 1.5; cursor: pointer; }
+.launch-form__consent input { flex: none; width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--cta-fill); cursor: pointer; }
+.launch-form__consent a { color: var(--accent); }
+.launch-form__trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.launch-form__status { margin: 10px 0 0; min-height: 1.5em; font-size: .875rem; color: var(--text-secondary); }
+.launch-form__status:empty { display: none; }
+.launch-form__status[data-state="ok"] { color: var(--green); font-weight: 600; }
+.launch-form__status[data-state="error"] { color: var(--text); }
+.launch-form[data-done] .launch-form__row,
+.launch-form[data-done] .launch-form__consent { display: none; }
+@media (max-width: 760px) {
+  .launch-form { margin: 28px auto 0; padding: 16px; }
+  .launch-form .launch-form__submit { flex: 1 1 100%; }
+}
+@media (min-width: 1041px) {
+  .intro > .intro__text:first-child .launch-form { margin-top: 24px; padding: 16px 18px; }
+  .intro > .intro__text:first-child .launch-form .btn { padding-block: 10px; }
+}
+
+/* Etykieta „Wkrótce” przy zdjęciach iPhone Duo — układ Duo w Aorum Mail 1.0 (decyzja 2026-10-05; wcześniej 1.0.1) */
+.duo-soon { display: flex; justify-content: center; margin: 0 0 14px; }
+.badge--soon { background: var(--accent-fill); border-color: var(--accent-stroke); color: var(--accent); }
+.section-head .duo-soon { justify-content: flex-start; }
