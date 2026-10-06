@@ -1905,7 +1905,8 @@ body:has(main > .hero--product:first-child) main > .section { padding-top: 40px;
   #apps .app-card__link { min-height: 36px; }
   #apps .grid { gap: 20px; }
   body:has(.site-nav a[aria-current="page"][href*="calendar/"]) #notify,
-  body:has(.site-nav a[aria-current="page"][href*="projects/"]) #notify { padding-top: 80px; }
+  body:has(.site-nav a[aria-current="page"][href*="projects/"]) #notify,
+  body:has(.site-nav a[aria-current="page"][href*="contacts/"]) #notify { padding-top: 80px; }
 }
 
 /* 2026-09-30 round 6: no focus frame on PL/EN after a click (keyboard focus shows an
