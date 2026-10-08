@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png?v=68afe5f422b2" media="(prefers-color-scheme: light)">
 <link rel="apple-touch-icon" href="assets/icon-180.png?v=2bcad72b7dd0">
 <link rel="manifest" href="site.webmanifest?v=20f77d7f7c15">
-<link rel="stylesheet" href="site.css?v=34f628284b8d">
+<link rel="stylesheet" href="site.css?v=7301fc4ed44d">
 <script src="lang-switch.js?v=d2f5f3855a7a"></script>
 <script src="site-interactions.js?v=3cbe38daf92e" defer></script>
 </head>
@@ -70,6 +70,20 @@
 </ul>
 
 <h2>Dane z&nbsp;usług Google</h2>
+<p>Które aplikacje Aorum korzystają z&nbsp;danych Google, w&nbsp;jakim zakresie i&nbsp;po co. Szczegóły opisuje polityka każdej aplikacji.</p>
+<div class="table-scroll" role="region" aria-label="Dane Google w aplikacjach Aorum" tabindex="0">
+<table class="data-table">
+  <thead><tr><th scope="col">Aplikacja</th><th scope="col">Dane Google (zakres dostępu)</th><th scope="col">Po co</th></tr></thead>
+  <tbody>
+    <tr><th scope="row" rowspan="3"><span class="product-copy">Aorum <span class="product-name">Mail</span></span></th><td data-label="Dane Google">Gmail — <code>gmail.modify</code></td><td data-label="Po co">wyświetlanie, wyszukiwanie, wysyłanie i&nbsp;porządkowanie poczty (archiwum, etykiety, kosz); opcjonalnie powiadomienia o&nbsp;nowej poczcie i&nbsp;wysyłka zaplanowana z&nbsp;serwera</td></tr>
+    <tr><td data-label="Dane Google">ustawienia Gmaila — <code>gmail.settings.basic</code>, tylko gdy włączysz zarządzanie regułami</td><td data-label="Po co">reguły poczty (filtry) i&nbsp;autoresponder</td></tr>
+    <tr><td data-label="Dane Google">Dysk Google — <code>drive.file</code>, tylko przy dużym załączniku</td><td data-label="Po co">wysłanie dużego pliku jako link; aplikacja widzi wyłącznie pliki, które sama utworzyła albo które w&nbsp;niej otworzysz</td></tr>
+    <tr><th scope="row">Aorum Assistant (w&nbsp;przygotowaniu)</th><td data-label="Dane Google">Gmail</td><td data-label="Po co">czytanie i&nbsp;streszczanie wiadomości, archiwizacja, etykiety i&nbsp;szkice; wysyłka tylko po Twoim potwierdzeniu</td></tr>
+    <tr><th scope="row"><span class="product-copy">Aorum <span class="product-name">Files</span> (w</span>&nbsp;przygotowaniu)</th><td data-label="Dane Google">Dysk Google — <code>drive</code></td><td data-label="Po co">przeglądanie, wyszukiwanie, otwieranie i&nbsp;porządkowanie Twoich plików na Dysku Google z&nbsp;poziomu aplikacji</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Dane z&nbsp;Gmaila i&nbsp;Dysku Google płyną między Twoim iPhone’em a&nbsp;Google. Wyjątki działają tylko po ich włączeniu i&nbsp;opisują je polityki aplikacji: usługi serwerowe Maila (powiadomienia, wysyłka zaplanowana) oraz fragmenty maili, które Assistant wysyła do modelu AI w&nbsp;Amazon Web Services we Frankfurcie — tylko gdy polecenie ich dotyczy i&nbsp;po Twojej zgodzie.</p>
 <p>Aplikacje Aorum używają danych z&nbsp;interfejsów API Google wyłącznie do funkcji opisanych w&nbsp;politykach powyżej; nie używamy ich do reklam, nie sprzedajemy ich i&nbsp;nie trenujemy na nich modeli AI.</p>
 <p>Wykorzystanie informacji otrzymanych w&nbsp;ramach zakresów Google Workspace jest zgodne z&nbsp;<a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Zasadami Google dotyczącymi danych użytkownika</a>, w&nbsp;tym z&nbsp;wymogami ograniczonego wykorzystania (Limited Use).</p>
 
@@ -95,6 +109,20 @@
 </ul>
 
 <h2>Data from Google services</h2>
+<p>Which Aorum apps use data from Google, with what access and why. Each app's policy gives the details.</p>
+<div class="table-scroll" role="region" aria-label="Google data in Aorum apps" tabindex="0">
+<table class="data-table">
+  <thead><tr><th scope="col">App</th><th scope="col">Google data (access scope)</th><th scope="col">Why</th></tr></thead>
+  <tbody>
+    <tr><th scope="row" rowspan="3"><span class="product-copy">Aorum <span class="product-name">Mail</span></span></th><td data-label="Google data">Gmail — <code>gmail.modify</code></td><td data-label="Why">showing, searching, sending and organising your mail (archive, labels, trash); optionally new-mail notifications and scheduled sending from the server</td></tr>
+    <tr><td data-label="Google data">Gmail settings — <code>gmail.settings.basic</code>, only when you turn on rule management</td><td data-label="Why">mail rules (filters) and the out-of-office reply</td></tr>
+    <tr><td data-label="Google data">Google Drive — <code>drive.file</code>, only for a&nbsp;large attachment</td><td data-label="Why">sending a&nbsp;large file as a&nbsp;link; the app sees only files it created itself or that you open with it</td></tr>
+    <tr><th scope="row">Aorum Assistant (in preparation)</th><td data-label="Google data">Gmail</td><td data-label="Why">reading and summarising messages, archiving, labels and drafts; sending only after you confirm</td></tr>
+    <tr><th scope="row"><span class="product-copy">Aorum <span class="product-name">Files</span> (in preparation)</span></th><td data-label="Google data">Google Drive — <code>drive</code></td><td data-label="Why">browsing, searching, opening and organising your files in Google Drive from within the app</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Data from Gmail and Google Drive travels between your iPhone and Google. The exceptions work only after you turn them on, and the app policies describe them: Mail's server services (notifications, scheduled sending) and the email excerpts the Assistant sends to an AI model in Amazon Web Services in Frankfurt — only when your request is about them and after you consent.</p>
 <p>Aorum apps use data from Google APIs only for the features described in the policies above; we do not use it for advertising, we do not sell it and we do not train AI models on it.</p>
 <p>The use of information received from Google Workspace scopes will adhere to the <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google User Data Policy</a>, including the Limited Use requirements.</p>
 
