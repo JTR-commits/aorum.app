@@ -56,7 +56,7 @@
 <div class="lang-pl" lang="pl">
 
 <h1><span class="product-copy">Wsparcie — Aorum <span class="product-name">Mail</span></span></h1>
-<p class="meta">Ostatnia aktualizacja: 2026-09-28 · aorum.app</p>
+<p class="meta">Ostatnia aktualizacja: 19 października 2026 · aorum.app</p>
 
 <div class="box">
   <p><strong>Kontakt z&nbsp;pomocą:</strong> napisz na <a href="mailto:support@aorum.app"><code>support@aorum.app</code></a>. Odpowiadamy na pytania o&nbsp;konta, powiadomienia, synchronizację i&nbsp;inne działanie aplikacji.</p>
@@ -72,7 +72,7 @@
 
 <details>
   <summary>Gdzie jest przechowywana moja poczta?</summary>
-  <p><span class="product-copy">Na tym iPhonie, we własnej bazie aplikacji. Aorum <span class="product-name">Mail</span> nie ma serwera trzymającego kopię Twojej poczty. Usunięcie aplikacji usuwa też tę bazę. Dwa opcjonalne wyjątki, które włączasz sam/a: przy wysyłce zaplanowanej z&nbsp;serwera wiadomość czeka jako szkic w&nbsp;Twojej własnej skrzynce u&nbsp;dostawcy, a&nbsp;nasz serwer w&nbsp;terminie ją wysyła; przy synchronizacji iCloud część stanu aplikacji (przypięcia, przypomnienia, podpisy, szablony — bez treści poczty) trafia do Twojego prywatnego iCloud.</span></p>
+  <p><span class="product-copy">Na tym iPhonie, we własnej bazie aplikacji. Aorum <span class="product-name">Mail</span> nie ma serwera trzymającego kopię Twojej poczty. Usunięcie aplikacji usuwa też tę bazę. Aplikacja łączy się z&nbsp;dostawcą poczty bezpośrednio z&nbsp;telefonu — nasz serwer nie dostaje danych z&nbsp;Twojej skrzynki ani tokenów logowania. Jeden opcjonalny wyjątek, który włączasz sam/a: przy synchronizacji iCloud część stanu aplikacji (przypięcia, przypomnienia, podpisy, szablony — bez treści poczty) trafia do Twojego prywatnego iCloud.</span></p>
 </details>
 
 <details>
@@ -87,7 +87,7 @@
 
 <details>
   <summary>Dlaczego nowa poczta przychodzi bez powiadomienia?</summary>
-  <p>Sprawdź Ustawienia → Application → Notifications i&nbsp;uprawnienie systemowe na górze ekranu. Gdy uprawnienie jest włączone, a&nbsp;poczta i&nbsp;tak przychodzi po cichu — to dostawca decyduje, jak szybko nas o&nbsp;niej informuje: Gmail ma kanał push, pozostałe skrzynki są sprawdzane, gdy iOS wybudza aplikację.</p>
+  <p>Sprawdź Ustawienia → Application → Notifications i&nbsp;uprawnienie systemowe na górze ekranu. Gdy uprawnienie jest włączone, a&nbsp;poczta i&nbsp;tak przychodzi po cichu — to iOS decyduje, jak często wybudza aplikację w&nbsp;tle: nową pocztę sprawdza sama aplikacja, na telefonie, gdy jest otwarta albo gdy iOS ją wybudzi. Aplikacji zamkniętej przesunięciem w&nbsp;górę iOS nie wybudza.</p>
 </details>
 
 <details>
@@ -112,7 +112,7 @@
 
 <details>
   <summary>Czy zaplanowana wiadomość wyjdzie, gdy telefon jest wyłączony?</summary>
-  <p>Tak, jeśli dla danego konta włączysz wysyłkę z&nbsp;serwera: ustawienia konta → zakładka Server, po zgodzie w&nbsp;osobnym oknie. Wiadomość czeka wtedy jako szkic w&nbsp;Twojej skrzynce, a&nbsp;nasz serwer wysyła ją w&nbsp;terminie, z&nbsp;dokładnością do około minuty. Jeśli nie wiadomo, czy dostawca przyjął wiadomość, serwer nie wysyła jej drugi raz — aplikacja pokazuje jej stan. Bez tej opcji zaplanowaną wiadomość wysyła Twój iPhone. Co trafia na serwer, opisuje <a href="privacy.html">polityka prywatności</a>.</p>
+  <p>Nie. Zaplanowaną wiadomość wysyła Twój iPhone: czeka w&nbsp;kolejce aplikacji i&nbsp;wychodzi w&nbsp;terminie, gdy aplikacja jest otwarta albo gdy iOS da jej czas w&nbsp;tle. Jeśli telefon jest wtedy wyłączony, wiadomość wyjdzie, gdy aplikacja znów będzie mogła działać. Wysyłki z&nbsp;serwera nie ma w&nbsp;wersji 1.0 — więcej w&nbsp;<a href="privacy.html">polityce prywatności</a>.</p>
 </details>
 
 <details>
@@ -157,12 +157,12 @@
 
 <details>
   <summary>Których funkcji nie ma jeszcze w&nbsp;wersji 1.0?</summary>
-  <p>Natychmiastowych powiadomień z&nbsp;serwera dla Outlooka, iCloud i&nbsp;innych skrzynek IMAP (te skrzynki są sprawdzane w&nbsp;tle, gdy iOS wybudzi aplikację), AI w&nbsp;chmurze oraz płatnych planów. Planujemy je w&nbsp;kolejnych wersjach.</p>
+  <p>Usług serwerowych z&nbsp;dostępem do poczty (natychmiastowych powiadomień przez nasz serwer i&nbsp;wysyłki zaplanowanej z&nbsp;serwera — skrzynki są sprawdzane na telefonie, gdy iOS wybudzi aplikację), AI w&nbsp;chmurze oraz płatnych planów.</p>
 </details>
 
 <details>
   <summary>Jak usunąć moje dane z&nbsp;serwera?</summary>
-  <p>Ustawienia → Security → Server data → „Usuń moje dane z&nbsp;serwera”. Jeśli na serwerze czekają zaplanowane wiadomości, najpierw je anuluj — do tego czasu aplikacja nie usunie danych. Autoryzację wysyłki z&nbsp;serwera dla jednego konta cofniesz w&nbsp;ustawieniach tego konta, w&nbsp;zakładce Server.</p>
+  <p>Wersja 1.0 nie wysyła na nasz serwer danych z&nbsp;poczty. Jeśli korzystałeś/aś z&nbsp;wcześniejszej wersji testowej z&nbsp;usługami serwerowymi, użyj: Ustawienia → Security → Server data → „Usuń moje dane z&nbsp;serwera” albo napisz na support@aorum.app.</p>
 </details>
 
 <details>
@@ -181,7 +181,7 @@
 <div class="lang-en" lang="en">
 
 <h1><span class="product-copy">Support — Aorum <span class="product-name">Mail</span></span></h1>
-<p class="meta">Last updated: 2026-09-28 · aorum.app</p>
+<p class="meta">Last updated: 19 October 2026 · aorum.app</p>
 
 <div class="box">
   <p><strong>Contact support:</strong> write to <a href="mailto:support@aorum.app"><code>support@aorum.app</code></a>. We answer questions about accounts, notifications, sync and general app behaviour.</p>
@@ -197,7 +197,7 @@
 
 <details>
   <summary>Where is my mail kept?</summary>
-  <p><span class="product-copy">On this iPhone, in the app's own database. Aorum <span class="product-name">Mail</span> has no server that keeps a&nbsp;copy of your mail. Removing the app removes that database with it. Two optional exceptions that you turn on yourself: with scheduled sending from the server, a&nbsp;message waits as a&nbsp;draft in your own mailbox with your provider and our server sends it on time; with iCloud sync, part of the app's state (pins, reminders, signatures, templates — no mail content) goes to your private iCloud.</span></p>
+  <p><span class="product-copy">On this iPhone, in the app's own database. Aorum <span class="product-name">Mail</span> has no server that keeps a&nbsp;copy of your mail. Removing the app removes that database with it. The app connects to your mail provider directly from the phone — our server receives no data from your mailbox and no sign-in tokens. One optional exception that you turn on yourself: with iCloud sync, part of the app's state (pins, reminders, signatures, templates — no mail content) goes to your private iCloud.</span></p>
 </details>
 
 <details>
@@ -212,7 +212,7 @@
 
 <details>
   <summary>Why does new mail arrive without a&nbsp;notification?</summary>
-  <p>Open Settings → Application → Notifications and check the system permission at the top. When the permission is granted and mail still arrives quietly, the provider decides how fast it can tell us: Gmail has a&nbsp;push channel, other mailboxes are checked when iOS wakes the app up.</p>
+  <p>Open Settings → Application → Notifications and check the system permission at the top. When the permission is granted and mail still arrives quietly, iOS decides how often it wakes the app in the background: the app checks for new mail itself, on the phone, while it is open or when iOS wakes it. iOS does not wake an app you have swiped away.</p>
 </details>
 
 <details>
@@ -237,7 +237,7 @@
 
 <details>
   <summary>Will a&nbsp;scheduled message go out while my phone is off?</summary>
-  <p>Yes, if you turn on sending from the server for that account: account settings → Server tab, after agreeing in a&nbsp;separate consent window. The message then waits as a&nbsp;draft in your mailbox and our server sends it on time, to within about a&nbsp;minute. If it is uncertain whether the provider accepted a&nbsp;message, the server does not send it a&nbsp;second time — the app shows its status. Without this option your iPhone sends scheduled messages. The <a href="privacy.html">Privacy Policy</a> explains what reaches the server.</p>
+  <p>No. Your iPhone sends scheduled messages: a&nbsp;message waits in the app's queue and goes out on time while the app is open or when iOS gives it time in the background. If the phone is off at that moment, the message goes out once the app can run again. Sending from the server is not part of version 1.0 — see the <a href="privacy.html">Privacy Policy</a>.</p>
 </details>
 
 <details>
@@ -282,12 +282,12 @@
 
 <details>
   <summary>Which features are not in version 1.0 yet?</summary>
-  <p>Instant server notifications for Outlook, iCloud and other IMAP mailboxes (those mailboxes are checked in the background when iOS wakes the app), cloud AI and paid plans. We plan them for future versions.</p>
+  <p>Server services with access to your mail (instant notifications through our server and scheduled sending from the server — mailboxes are checked on the phone when iOS wakes the app), cloud AI and paid plans.</p>
 </details>
 
 <details>
   <summary>How do I&nbsp;delete my data from your server?</summary>
-  <p>Settings → Security → Server data → "Delete my data from server". If scheduled messages are waiting on the server, cancel them first — until then the app will not delete the data. To revoke server sending for a&nbsp;single account, use that account's settings, Server tab.</p>
+  <p>Version 1.0 sends no mail data to our server. If you used an earlier test version with server services, use Settings → Security → Server data → "Delete my data from server", or write to support@aorum.app.</p>
 </details>
 
 <details>
