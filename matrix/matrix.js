@@ -20,6 +20,7 @@
     if (dialog.open) dialog.close();
     if ($('#releases').open) $('#releases').close();
     $('#compare-results').replaceChildren();
+    $('#compare-code').replaceChildren(); $('#compare-code').hidden = true;
     $('#app-view').hidden = true; $('#login-view').hidden = false;
     $('#password').value = '';
   }
@@ -163,6 +164,21 @@
   const kindLabels = {new:'Nowa / udostępniona',regression:'Regresja / ograniczenie',removed:'Usunięta pozycja',improved:'Poprawa',verification:'Zmiana odbioru',changed:'Opis / inna zmiana'};
   const fieldLabels = {code:'Kod',release:'Wydanie',device:'Odbiór',name:'Nazwa',category:'Obszar',description:'Opis',source:'Źródło',checkedAt:'Data audytu',note:'Uwaga',deviceName:'Urządzenie',build:'Build próby',testedAt:'Data próby',evidence:'Dowód',entry:'Pozycja'};
   let comparison = null, compareRequest = 0, captureId = null, capturing = false;
+  function renderCodeReferences(from, to) {
+    $('#compare-code').replaceChildren(...[from, to].map((state, index) => {
+      const item = node('div');
+      item.append(node('strong','small',index ? 'Kod stanu późniejszego' : 'Kod stanu wcześniejszego'));
+      const match = /^https:\/\/github\.com\/([a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\/([a-z0-9_.-]+)\/commit\/([a-f0-9]{40})$/i.exec(state.sourceCommitUrl || '');
+      if (match && !['.', '..'].includes(match[2])) {
+        const link = node('a','',`${match[1]}/${match[2]} · ${match[3].slice(0,8)}`);
+        link.href = state.sourceCommitUrl; link.target = '_blank'; link.rel = 'noopener noreferrer';
+        link.title = state.sourceCommitUrl;
+        item.append(link);
+      } else item.append(node('span','muted small',state.id === 'current' ? 'Nie przypisano — wybierz zapisany stan.' : 'Nie podano.'));
+      return item;
+    }));
+    $('#compare-code').hidden = false;
+  }
   function renderComparison() {
     if (!comparison) return;
     const filter = $('#compare-filter').value;
@@ -188,12 +204,14 @@
   }
   async function compare() {
     const request = ++compareRequest; comparison = null;
+    $('#compare-code').replaceChildren(); $('#compare-code').hidden = true; $('#compare-context').textContent = '';
     $('#compare-results').replaceChildren(); $('#compare-error').textContent = ''; $('#compare-status').textContent = 'Porównywanie…';
     try {
       const result = await api(`/v1/compare?from=${encodeURIComponent($('#compare-from').value)}&to=${encodeURIComponent($('#compare-to').value)}`);
       if (request !== compareRequest || !session) return;
       comparison = result;
       $('#compare-context').textContent = `${result.from.label} · ${result.from.build} → ${result.to.label} · ${result.to.build}`;
+      renderCodeReferences(result.from, result.to);
       renderComparison();
     } catch(error) {
       if (request !== compareRequest) return;
