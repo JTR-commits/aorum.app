@@ -18,6 +18,8 @@
     session = null; sessionStorage.removeItem('aorum-matrix-session');
     data = null; selected = null; $('#rows').replaceChildren();
     if (dialog.open) dialog.close();
+    if ($('#releases').open) $('#releases').close();
+    $('#compare-results').replaceChildren();
     $('#app-view').hidden = true; $('#login-view').hidden = false;
     $('#password').value = '';
   }
@@ -156,6 +158,84 @@
       ...data.features.map(f=>[f.name,f.category,labels[f.code],labels[f.release],labels[f.device],f.deviceName,f.build,f.testedAt,f.evidence,f.note,f.source,f.checkedAt])];
     const url=URL.createObjectURL(new Blob(['\uFEFF'+records.map(row=>row.map(escape).join(';')).join('\r\n')],{type:'text/csv;charset=utf-8'}));
     const a=node('a');a.href=url;a.download=`aorum-mail-matrix-${new Date().toISOString().slice(0,10)}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  };
+  const releasesDialog = $('#releases'), capture = $('#capture-form');
+  const kindLabels = {new:'Nowa / udostępniona',regression:'Regresja / ograniczenie',removed:'Usunięta pozycja',improved:'Poprawa',verification:'Zmiana odbioru',changed:'Opis / inna zmiana'};
+  const fieldLabels = {code:'Kod',release:'Wydanie',device:'Odbiór',name:'Nazwa',category:'Obszar',description:'Opis',source:'Źródło',checkedAt:'Data audytu',note:'Uwaga',deviceName:'Urządzenie',build:'Build próby',testedAt:'Data próby',evidence:'Dowód',entry:'Pozycja'};
+  let comparison = null, compareRequest = 0, captureId = null, capturing = false;
+  function renderComparison() {
+    if (!comparison) return;
+    const filter = $('#compare-filter').value;
+    const rows = comparison.changes.filter(row => filter === 'all' || row.kinds.includes(filter));
+    $('#compare-status').textContent = `Zmienione funkcje: ${comparison.changes.length} · nowe / udostępnione: ${comparison.counts.new} · regresje / ograniczenia: ${comparison.counts.regression} · usunięte: ${comparison.counts.removed}`;
+    $('#compare-results').replaceChildren(...(rows.length ? rows.map(row => {
+      const card = node('article','comparison-card');
+      card.append(node('h3','',row.name),node('p','small muted',row.category));
+      const badges = node('div','comparison-badges');
+      row.kinds.forEach(kind => badges.append(node('span',`badge ${kind === 'regression' || kind === 'removed' ? 'failed' : kind === 'new' || kind === 'improved' ? 'passed' : ''}`,kindLabels[kind])));
+      card.append(badges);
+      row.details.forEach(change => {
+        const line = node('div','comparison-line');
+        const format = value => {
+          if (change.field === 'entry') return value === 'added' ? 'Dodano' : value === 'present' ? 'Obecna' : 'Brak';
+          return ['code','release','device'].includes(change.field) ? labels[value] || value || '—' : value || '—';
+        };
+        line.append(node('strong','',fieldLabels[change.field] || change.field),node('span','',format(change.before)),node('span','comparison-arrow','→'),node('span','',format(change.after)));
+        card.append(line);
+      });
+      return card;
+    }) : [node('p','empty',comparison.changes.length ? 'Brak zmian dla wybranego filtra.' : 'Brak różnic między wybranymi stanami.')]));
+  }
+  async function compare() {
+    const request = ++compareRequest; comparison = null;
+    $('#compare-results').replaceChildren(); $('#compare-error').textContent = ''; $('#compare-status').textContent = 'Porównywanie…';
+    try {
+      const result = await api(`/v1/compare?from=${encodeURIComponent($('#compare-from').value)}&to=${encodeURIComponent($('#compare-to').value)}`);
+      if (request !== compareRequest || !session) return;
+      comparison = result;
+      $('#compare-context').textContent = `${result.from.label} · ${result.from.build} → ${result.to.label} · ${result.to.build}`;
+      renderComparison();
+    } catch(error) {
+      if (request !== compareRequest) return;
+      $('#compare-status').textContent = ''; $('#compare-context').textContent = ''; $('#compare-error').textContent = error.message;
+    }
+  }
+  async function loadReleases(selectedTo) {
+    const result = await api('/v1/releases');
+    if (!session) return;
+    const states = [...result.releases, {id:'current',label:'Bieżąca macierz',build:'Aktualny stan'}];
+    for (const id of ['compare-from','compare-to']) {
+      const previous = $('#'+id).value;
+      $('#'+id).replaceChildren(...states.map(state => {
+        const option = node('option','',`${state.label} · ${state.build}`); option.value = state.id; return option;
+      }));
+      $('#'+id).value = states.some(state => state.id === previous) ? previous : (id === 'compare-from' ? 'baseline' : 'current');
+    }
+    if (selectedTo) $('#compare-to').value = selectedTo;
+    await compare();
+  }
+  $('#open-releases').onclick = async () => {
+    releasesDialog.showModal(); $('#compare-error').textContent = ''; $('#compare-status').textContent = 'Wczytywanie stanów…';
+    try { await loadReleases(); } catch(error) { $('#compare-status').textContent=''; $('#compare-error').textContent=error.message; }
+  };
+  $('#close-releases').onclick = () => { if (!capturing) releasesDialog.close(); };
+  releasesDialog.addEventListener('cancel', event => { if (capturing) event.preventDefault(); });
+  $('#compare-from').onchange = compare; $('#compare-to').onchange = compare; $('#compare-filter').onchange = renderComparison;
+  capture.addEventListener('input', () => { if (!capturing) captureId = null; });
+  capture.onsubmit = async event => {
+    event.preventDefault(); if (capturing) return;
+    capturing=true; $('#capture-submit').disabled=true; $('#capture-error').textContent='';
+    captureId ||= crypto.randomUUID();
+    const body={id:captureId,...Object.fromEntries(new FormData(capture))};
+    capture.querySelectorAll('input,textarea').forEach(field=>field.disabled=true);
+    try {
+      const result = await api('/v1/releases',{method:'POST',body:JSON.stringify(body)});
+      $('#capture-error').textContent='';
+      capture.reset(); captureId=null; $('#capture-box').open=false;
+      try { await loadReleases(result.id); }
+      catch(error) { $('#compare-error').textContent=`Stan zapisano. Nie udało się odświeżyć porównania: ${error.message}`; }
+    } catch(error) { $('#capture-error').textContent=error.message; }
+    finally { capturing=false; $('#capture-submit').disabled=false; capture.querySelectorAll('input,textarea').forEach(field=>field.disabled=false); }
   };
   if (session?.expiresAt > Date.now()) load(); else signedOut();
 })();
