@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://aorum-matrix-c6qhaupygq-lm.a.run.app; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>Matrix — Aorum Mail</title>
+  <link rel="icon" href="../assets/icon-32.png">
+  <link rel="stylesheet" href="matrix.css">
+  <script src="config.js" defer></script>
+  <script src="matrix.js" defer></script>
+</head>
+<body>
+  <section id="login-view" class="login-wrap">
+    <form id="login-form" class="login-card">
+      <img class="app-icon" src="../assets/aorum-mail-icon.png" width="56" height="56" alt="">
+      <p class="eyebrow">AORUM MAIL / MATRIX</p>
+      <h1>Jeden obraz funkcji.</h1>
+      <p class="muted">Kod, wydanie i odbiór na urządzeniu.<br>Zaloguj się do prywatnego pulpitu.</p>
+      <label for="username">Użytkownik</label>
+      <input id="username" name="username" autocomplete="username" value="jack" required maxlength="80">
+      <label for="password">Hasło</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="256">
+      <p id="login-error" class="error" role="alert"></p>
+      <button id="login-submit" class="primary" type="submit">Zaloguj się <span aria-hidden="true">→</span></button>
+      <a class="back-link" href="../">Wróć do Aorum</a>
+    </form>
+  </section>
+  <div id="app-view" hidden>
+    <header class="topbar">
+      <a class="brand" href="../"><img src="../assets/aorum-mail-icon.png" width="32" height="32" alt=""><span>Aorum <strong>Matrix</strong></span></a>
+      <span class="private-label">Prywatny pulpit</span>
+      <div class="account"><span class="avatar">J</span><span>jack</span><button id="logout" class="quiet">Wyloguj</button></div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <p class="eyebrow">PRODUKT</p>
+        <div class="product"><img src="../assets/aorum-mail-icon.png" width="26" height="26" alt=""><span>Aorum Mail<small>iPhone</small></span></div>
+        <p class="eyebrow section-label">OBSZARY</p>
+        <nav id="categories" aria-label="Obszary funkcji"></nav>
+        <div class="sidebar-foot"><span class="tiny-dot"></span> Dane zapisane na serwerze<p>Potwierdzenie na urządzeniu<br>wymaga osobnej próby.</p></div>
+      </aside>
+      <main>
+        <div class="page-heading">
+          <div><p class="eyebrow">STAN PRODUKTU</p><h1>Macierz funkcji</h1><p class="muted" id="snapshot">Wczytywanie danych…</p></div>
+          <div class="heading-actions"><button id="refresh" class="secondary">Odśwież</button><button id="export" class="secondary">Eksport CSV</button></div>
+        </div>
+        <div id="load-error" class="notice danger" role="alert" hidden></div>
+        <section class="stats" aria-label="Podsumowanie macierzy">
+          <button class="stat active" data-view="all"><span>Wszystkie funkcje</span><strong id="count-all">—</strong><small>9 obszarów produktu</small></button>
+          <button class="stat" data-view="code"><span>Jest w kodzie</span><strong id="count-code">—</strong><small>pełny zakres kodu</small></button>
+          <button class="stat" data-view="release"><span>Dostępne w wydaniu</span><strong id="count-release">—</strong><small id="release-foot">w tym funkcje warunkowe</small></button>
+          <button class="stat" data-view="passed"><span>Potwierdzone na urządzeniu</span><strong id="count-passed">—</strong><small id="device-foot">wymaga opisu próby</small></button>
+        </section>
+        <div class="notice"><span class="notice-mark">i</span><div><strong>Trzy niezależne poziomy pewności.</strong> Obecność kodu nie potwierdza dostępności w wydaniu ani działania na iPhonie. „Nie sprawdzono” nie oznacza błędu.</div></div>
+        <section class="matrix-panel" aria-label="Lista funkcji">
+          <div class="toolbar">
+            <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Szukaj funkcji, ograniczenia lub źródła…" aria-label="Szukaj funkcji"></label>
+            <label class="select-label">Widok<select id="view-filter"><option value="all">Wszystkie</option><option value="gaps">Luki i ograniczenia</option><option value="priority">Najważniejsze luki</option><option value="unverified">Do odbioru</option><option value="passed">Potwierdzone</option><option value="failed">Z problemem</option><option value="code">Jest w kodzie</option><option value="release">Dostępne w wydaniu</option></select></label>
+          </div>
+          <div class="table-top"><span id="result-count" aria-live="polite"></span><span>Wybierz funkcję, aby dodać wynik lub uwagę</span></div>
+          <div class="table-scroll">
+            <table><thead><tr><th>Funkcja</th><th>Jest w kodzie</th><th>Dostępne w wydaniu</th><th>Potwierdzone na urządzeniu</th><th><span class="sr-only">Szczegóły</span></th></tr></thead><tbody id="rows"></tbody></table>
+          </div>
+          <div id="empty" class="empty" hidden><strong>Brak pasujących funkcji</strong><p>Zmień filtr lub wpisz inne słowo.</p><button id="clear-filters" class="secondary">Wyczyść filtry</button></div>
+        </section>
+        <footer class="page-footer"><span id="save-status" role="status">Wczytywanie…</span><span>Ocena audytu: <strong>7/10</strong> · 20.10.2026</span></footer>
+      </main>
+    </div>
+  </div>
+  <dialog id="detail">
+    <form id="edit-form">
+      <div class="drawer-head"><p class="eyebrow" id="detail-category"></p><button id="close-detail" type="button" class="close" aria-label="Zamknij szczegóły">×</button></div>
+      <h2 id="detail-title"></h2><p class="muted" id="detail-description"></p>
+      <div id="priority-note" class="priority-note" hidden>Wysoki priorytet · podstawowy scenariusz pracy</div>
+      <div class="edit-statuses">
+        <label>Jest w kodzie<select name="code"><option value="yes">Tak</option><option value="partial">Częściowo</option><option value="no">Brak</option></select></label>
+        <label>Dostępne w wydaniu<select name="release"><option value="yes">Tak</option><option value="conditional">Warunkowo</option><option value="partial">Częściowo</option><option value="off">Wyłączone</option><option value="debug">Tylko deweloperskie</option><option value="no">Brak</option></select></label>
+      </div>
+      <h3>Odbiór na urządzeniu</h3>
+      <label>Wynik<select name="device"><option value="unverified">Nie sprawdzono</option><option value="passed">Potwierdzone</option><option value="partial">Częściowo działa</option><option value="failed">Nie działa</option></select></label>
+      <div class="edit-statuses"><label>Urządzenie<input name="deviceName" placeholder="np. iPhone 17 Pro" maxlength="120"></label><label>Wersja / build<input name="build" placeholder="np. 1.0 (14)" maxlength="80"></label></div>
+      <label>Data próby<input name="testedAt" type="date"></label>
+      <label>Co sprawdzono i z jakim wynikiem?<textarea name="evidence" rows="3" maxlength="2000" placeholder="Czynność → zaobserwowany wynik"></textarea></label>
+      <label>Uwagi<textarea name="note" rows="3" maxlength="4000" placeholder="Ograniczenie, pomysł lub kolejny krok…"></textarea></label>
+      <details class="source-box"><summary>Źródło i punkt odniesienia</summary><p>Odczyt kodu: <span id="detail-date"></span></p><code id="detail-source"></code><p id="detail-competitors"></p><p class="muted small">Źródło odnosi się do audytu. Możliwości konkurencji mogą zależeć od planu i platformy.</p></details>
+      <details class="source-box"><summary>Historia zmian</summary><div id="history"></div></details>
+      <p id="edit-error" class="error" role="alert"></p>
+      <div class="drawer-actions"><button type="button" id="cancel-edit" class="secondary">Anuluj</button><button type="submit" id="save-edit" class="primary">Zapisz zmiany</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
