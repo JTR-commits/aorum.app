@@ -100,6 +100,8 @@
         <summary>Zapisz stan wydania</summary>
         <form id="capture-form">
           <div class="edit-statuses"><label>Nazwa stanu<input name="label" maxlength="100" placeholder="np. Odbiór wersji 1.0" required></label><label>Wersja / build stanu<input name="build" maxlength="80" placeholder="np. 1.0 (15)" required></label></div>
+          <label>Link do wersji kodu (opcjonalnie)<input name="sourceCommitUrl" type="url" maxlength="300" placeholder="https://github.com/JTR-commits/nexus-mail/commit/…" aria-describedby="commit-help"></label>
+          <p id="commit-help" class="muted small">Link GitHub do konkretnego zapisu z pełnym, 40-znakowym identyfikatorem. Pozostanie przypisany do tego stanu. Dostęp do prywatnego repozytorium wymaga zalogowania w GitHubie.</p>
           <label>Opis stanu<textarea name="note" maxlength="2000" rows="2" placeholder="Co obejmuje ten zapis?"></textarea></label>
           <p class="muted">Zapis obejmuje całą aktualną macierz, także funkcje ukryte filtrami. Nie potwierdza samodzielnie publikacji ani prób na urządzeniu.</p>
           <button class="primary" type="submit" id="capture-submit">Zapisz stan</button>
@@ -108,6 +110,7 @@
       </details>
       <div class="edit-statuses comparison-selects"><label>Stan wcześniejszy<select id="compare-from"></select></label><label>Stan późniejszy<select id="compare-to"></select></label></div>
       <p id="compare-context" class="muted small"></p>
+      <div id="compare-code" class="comparison-code" hidden></div>
       <label>Pokaż zmiany<select id="compare-filter"><option value="all">Wszystkie różnice</option><option value="new">Nowe lub udostępnione</option><option value="regression">Regresje / ograniczenia</option><option value="removed">Usunięte pozycje</option><option value="improved">Poprawa</option><option value="verification">Zmiana odbioru</option><option value="changed">Opisy i pozostałe zmiany</option></select></label>
       <p id="compare-status" role="status" aria-live="polite"></p>
       <div id="compare-error" class="error" role="alert"></div>
