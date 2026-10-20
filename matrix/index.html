@@ -45,7 +45,7 @@
       <main>
         <div class="page-heading">
           <div><p class="eyebrow">STAN PRODUKTU</p><h1>Macierz funkcji</h1><p class="muted" id="snapshot">Wczytywanie danych…</p></div>
-          <div class="heading-actions"><button id="refresh" class="secondary">Odśwież</button><button id="export" class="secondary">Eksport CSV</button></div>
+          <div class="heading-actions"><button id="open-releases" class="secondary">Porównaj wydania</button><button id="refresh" class="secondary">Odśwież</button><button id="export" class="secondary">Eksport CSV</button></div>
         </div>
         <div id="load-error" class="notice danger" role="alert" hidden></div>
         <section class="stats" aria-label="Podsumowanie macierzy">
@@ -90,6 +90,30 @@
       <p id="edit-error" class="error" role="alert"></p>
       <div class="drawer-actions"><button type="button" id="cancel-edit" class="secondary">Anuluj</button><button type="submit" id="save-edit" class="primary">Zapisz zmiany</button></div>
     </form>
+  </dialog>
+  <dialog id="releases" aria-labelledby="releases-title">
+    <div class="release-content">
+      <div class="drawer-head"><p class="eyebrow">HISTORIA PRODUKTU</p><button id="close-releases" type="button" class="close" aria-label="Zamknij porównanie">×</button></div>
+      <h2 id="releases-title">Porównanie wydań</h2>
+      <p class="muted">Porównuj zapisane stany funkcji. Zapis jest trwały i nie zmienia się przy późniejszej edycji macierzy.</p>
+      <details class="source-box" id="capture-box">
+        <summary>Zapisz stan wydania</summary>
+        <form id="capture-form">
+          <div class="edit-statuses"><label>Nazwa stanu<input name="label" maxlength="100" placeholder="np. Odbiór wersji 1.0" required></label><label>Wersja / build stanu<input name="build" maxlength="80" placeholder="np. 1.0 (15)" required></label></div>
+          <label>Opis stanu<textarea name="note" maxlength="2000" rows="2" placeholder="Co obejmuje ten zapis?"></textarea></label>
+          <p class="muted">Zapis obejmuje całą aktualną macierz, także funkcje ukryte filtrami. Nie potwierdza samodzielnie publikacji ani prób na urządzeniu.</p>
+          <button class="primary" type="submit" id="capture-submit">Zapisz stan</button>
+          <p id="capture-error" class="error" role="alert"></p>
+        </form>
+      </details>
+      <div class="edit-statuses comparison-selects"><label>Stan wcześniejszy<select id="compare-from"></select></label><label>Stan późniejszy<select id="compare-to"></select></label></div>
+      <p id="compare-context" class="muted small"></p>
+      <label>Pokaż zmiany<select id="compare-filter"><option value="all">Wszystkie różnice</option><option value="new">Nowe lub udostępnione</option><option value="regression">Regresje / ograniczenia</option><option value="removed">Usunięte pozycje</option><option value="improved">Poprawa</option><option value="verification">Zmiana odbioru</option><option value="changed">Opisy i pozostałe zmiany</option></select></label>
+      <p id="compare-status" role="status" aria-live="polite"></p>
+      <div id="compare-error" class="error" role="alert"></div>
+      <div id="compare-results"></div>
+      <p class="muted small">Regresja oznacza niższy zapisany zakres kodu, dostępności lub wynik próby. Może wynikać ze świadomej decyzji. „Nie sprawdzono” jest brakiem dowodu, nie usterką. Data zapisu nie jest datą publikacji aplikacji.</p>
+    </div>
   </dialog>
 </body>
 </html>
