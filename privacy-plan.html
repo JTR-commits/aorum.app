@@ -56,7 +56,7 @@
 <div class="lang-pl" lang="pl">
 
 <h1><span class="product-copy">Polityka prywatności — Aorum <span class="product-name">Plan</span></span></h1>
-<p class="meta">Ostatnia aktualizacja: 2026-10-19 · Administrator danych: Vansa Sp. z&nbsp;o.o., ul. Jana Smolenia 14, 30-864 Kraków (KRS 0000675425, NIP 6793148076) · Kontakt: support@aorum.app · Strona: aorum.app</p>
+<p class="meta">Ostatnia aktualizacja: 2026-10-22 · Administrator danych: Vansa Sp. z&nbsp;o.o., ul. Jana Smolenia 14, 30-864 Kraków (KRS 0000675425, NIP 6793148076) · Kontakt: support@aorum.app · Strona: aorum.app</p>
 
 <div class="box">
   <p><strong>W&nbsp;skrócie:</strong><span class="product-copy"> Aorum <span class="product-name">Plan</span> to kalendarz, zadania i&nbsp;notatki na iPhone. Aplikacja jest w&nbsp;testach i&nbsp;nie jest jeszcze dostępna w&nbsp;App Store; ta polityka opisuje, jak przetwarza dane dziś, a&nbsp;przed premierą zaktualizujemy ją, jeśli coś się zmieni. Twoje wpisy są na Twoim iPhonie. Synchronizacja, Kalendarz Google, Google Tasks, Notion i&nbsp;pogoda działają tylko po ich włączeniu. Wydarzenia z&nbsp;Kalendarza Google i&nbsp;zadania z&nbsp;Google Tasks aplikacja tylko wyświetla — trzyma je w&nbsp;pamięci telefonu i&nbsp;niczego w&nbsp;Google nie zmienia. Nie sprzedajemy danych i&nbsp;nie prowadzimy śledzenia reklamowego.</span></p>
@@ -105,10 +105,22 @@
 <h2>4. Czego nie robimy</h2>
 <p>Nie sprzedajemy danych, nie prowadzimy śledzenia reklamowego, nie używamy analityki reklamowej i&nbsp;nie trenujemy modeli AI na Twoich danych.</p>
 
-<h2>5. Jak długo przechowujemy dane</h2>
+<h2>5. Ochrona danych</h2>
+<p>Dane z&nbsp;Kalendarza Google i&nbsp;Google Tasks traktujemy jako dane wrażliwe. Chronią je te mechanizmy:</p>
+<ul>
+  <li><strong>Szyfrowane połączenia</strong> — aplikacja łączy się z&nbsp;Google, Notion i&nbsp;serwerem synchronizacji Aorum wyłącznie przez HTTPS (TLS). iOS blokuje w&nbsp;niej połączenia nieszyfrowane (App Transport Security bez wyjątków).</li>
+  <li><strong>Logowanie i&nbsp;klucze dostępu w&nbsp;pęku kluczy iOS</strong> — logujesz się w&nbsp;oknie Google, więc aplikacja nie widzi Twojego hasła. Token dostępu Google, klucz Notion i&nbsp;klucz konta Aorum są zapisane w&nbsp;pęku kluczy iOS (Keychain), szyfrowanym przez system i&nbsp;dostępnym tylko dla aplikacji. Po wylogowaniu z&nbsp;Google w&nbsp;ustawieniach synchronizacji token Google jest usuwany z&nbsp;telefonu.</li>
+  <li><strong>Dane z&nbsp;Google tylko na Twoim iPhonie</strong> — wydarzenia i&nbsp;zadania z&nbsp;Google płyną bezpośrednio między Twoim iPhone'em a&nbsp;Google, bez naszych serwerów, więc ani my, ani nikt inny nie ma do nich dostępu. Aplikacja trzyma je w&nbsp;pamięci; jedyna kopia zapisana na telefonie to podgląd dla widżetów w&nbsp;kontenerze aplikacji, zastępowany przy każdym odświeżeniu.</li>
+  <li><strong>Szyfrowanie na urządzeniu</strong> — baza aplikacji i&nbsp;podgląd dla widżetów leżą w&nbsp;izolowanym kontenerze aplikacji (sandbox iOS), który iOS szyfruje (Data Protection), gdy iPhone ma ustawiony kod. Aplikację możesz dodatkowo zablokować Face ID albo kodem.</li>
+  <li><strong>Najwęższy dostęp</strong> — o&nbsp;Kalendarz Google i&nbsp;Google Tasks aplikacja prosi tylko w&nbsp;trybie odczytu, więc nie może w&nbsp;nich niczego utworzyć, zmienić ani usunąć; na Dysku Google widzi wyłącznie plik, który sama utworzyła (punkty 2.5 i&nbsp;2.6).</li>
+  <li><strong>Bez sprzedaży, reklam i&nbsp;trenowania AI</strong> — danych z&nbsp;Google nie sprzedajemy, nie przekazujemy nikomu, nie używamy do reklam ani do trenowania modeli AI; korzystamy z&nbsp;nich zgodnie z&nbsp;wymogami ograniczonego wykorzystania (Limited Use) Zasad dotyczących danych użytkownika w&nbsp;usługach interfejsów API Google (punkt 2.7).</li>
+  <li><strong>Usunięcie danych i&nbsp;cofnięcie dostępu</strong> — wylogowanie z&nbsp;Google w&nbsp;ustawieniach synchronizacji usuwa token i&nbsp;pobrane dane z&nbsp;aplikacji. Zgodę cofniesz też w&nbsp;ustawieniach konta Google (Bezpieczeństwo → Połączenia z&nbsp;aplikacjami innych firm). Usunięcie aplikacji usuwa z&nbsp;iPhone'a jej bazę i&nbsp;pliki. Usunięcia danych konta Aorum możesz zażądać pod adresem support@aorum.app.</li>
+</ul>
+
+<h2>6. Jak długo przechowujemy dane</h2>
 <p>Dane na iPhonie zostają, dopóki ich nie usuniesz albo nie usuniesz aplikacji. Plik synchronizacji zostaje na Twoim koncie u&nbsp;wybranego dostawcy, dopóki go nie usuniesz. Dane konta Aorum przechowujemy, dopóki masz konto; dane z&nbsp;kopii zapasowych bazy znikają, gdy te kopie wygasają. Wydarzeń i&nbsp;zadań z&nbsp;Google nie przechowujemy wcale — są tylko na Twoim iPhonie, w&nbsp;pamięci aplikacji i&nbsp;w&nbsp;podglądzie dla widżetów.</p>
 
-<h2>6. Odbiorcy danych</h2>
+<h2>7. Odbiorcy danych</h2>
 <ul>
   <li><strong>Supabase</strong> (region Frankfurt, UE) — przechowuje bazę Aorum w&nbsp;naszym imieniu jako podmiot przetwarzający, gdy korzystasz z&nbsp;konta Aorum.</li>
   <li><strong>Apple</strong> — kalendarze i&nbsp;przypomnienia na iPhonie, iCloud Drive, Siri oraz prognoza pogody (WeatherKit).</li>
@@ -117,13 +129,13 @@
 </ul>
 <p>Nie przekazujemy danych innym firmom.</p>
 
-<h2>7. Prawa użytkownika</h2>
+<h2>8. Prawa użytkownika</h2>
 <p>Zgodnie z&nbsp;RODO masz prawo do: dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz sprzeciwu wobec przetwarzania. Dostęp aplikacji do Google cofniesz, wylogowując się w&nbsp;ustawieniach aplikacji albo w&nbsp;ustawieniach konta Google (Bezpieczeństwo → Połączenia z&nbsp;aplikacjami innych firm). Masz prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (UODO).</p>
 
-<h2>8. Zmiany polityki</h2>
+<h2>9. Zmiany polityki</h2>
 <p>Przed udostępnieniem aplikacji w&nbsp;App Store i&nbsp;wraz z&nbsp;jej rozwojem będziemy aktualizować tę politykę. Datę ostatniej zmiany znajdziesz na górze strony.</p>
 
-<h2>9. Kontakt</h2>
+<h2>10. Kontakt</h2>
 <p>W&nbsp;sprawach związanych z&nbsp;ochroną danych osobowych pisz na support@aorum.app.</p>
 
 </div>
@@ -131,7 +143,7 @@
 <div class="lang-en" lang="en">
 
 <h1><span class="product-copy">Privacy Policy — Aorum <span class="product-name">Plan</span></span></h1>
-<p class="meta">Last updated: 2026-10-19 · Data controller: Vansa Sp. z&nbsp;o.o., ul. Jana Smolenia 14, 30-864 Kraków (KRS 0000675425, NIP 6793148076) · Contact: support@aorum.app · Site: aorum.app</p>
+<p class="meta">Last updated: 2026-10-22 · Data controller: Vansa Sp. z&nbsp;o.o., ul. Jana Smolenia 14, 30-864 Kraków (KRS 0000675425, NIP 6793148076) · Contact: support@aorum.app · Site: aorum.app</p>
 
 <div class="box">
   <p><strong>In short:</strong><span class="product-copy"> Aorum <span class="product-name">Plan</span> is a&nbsp;calendar, tasks and notes app for iPhone. The app is in testing and not yet on the App Store; this policy describes how it processes data today, and we will update it before launch if anything changes. Your entries are on your iPhone. Sync, Google Calendar, Google Tasks, Notion and weather work only after you turn them on. The app only displays events from Google Calendar and tasks from Google Tasks — it keeps them in the phone's memory and never changes anything in Google. We do not sell data and we do not run advertising tracking.</span></p>
@@ -180,10 +192,22 @@
 <h2>4. What we do not do</h2>
 <p>We do not sell data, we do not run advertising tracking, we do not use advertising analytics and we do not train AI models on your data.</p>
 
-<h2>5. How long we keep data</h2>
+<h2>5. Data protection</h2>
+<p>We treat Google Calendar and Google Tasks data as sensitive data. It is protected by these mechanisms:</p>
+<ul>
+  <li><strong>Encrypted connections</strong> — the app connects to Google, Notion and the Aorum sync server only over HTTPS (TLS). iOS blocks unencrypted connections in the app (App Transport Security with no exceptions).</li>
+  <li><strong>Sign-in and access keys in the iOS Keychain</strong> — you sign in on Google's own sign-in screen, so the app never sees your password. The Google access token, the Notion key and the Aorum account key are stored in the iOS Keychain, encrypted by the system and available only to the app. When you sign out of Google in the sync settings, the Google token is deleted from the phone.</li>
+  <li><strong>Google data stays on your iPhone</strong> — events and tasks from Google travel directly between your iPhone and Google, without our servers, so neither we nor anyone else can access them. The app keeps them in memory; the only copy saved on the phone is the preview for widgets in the app's container, replaced at every refresh.</li>
+  <li><strong>Encryption on the device</strong> — the app's database and the widget preview live in the app's isolated container (iOS sandbox), which iOS encrypts (Data Protection) when the iPhone has a&nbsp;passcode. You can also lock the app with Face ID or a&nbsp;passcode.</li>
+  <li><strong>Least access</strong> — the app asks for Google Calendar and Google Tasks in read-only mode, so it cannot create, change or delete anything there; in Google Drive it sees only the file it created itself (sections 2.5 and 2.6).</li>
+  <li><strong>No selling, advertising or AI training</strong> — we do not sell Google data, share it with anyone, use it for advertising or use it to train AI models; we use it in line with the Limited Use requirements of the Google API Services User Data Policy (section 2.7).</li>
+  <li><strong>Deletion and revoking access</strong> — signing out of Google in the sync settings deletes the token and the downloaded data from the app. You can also revoke consent in your Google account settings (Security → Third-party connections). Deleting the app removes its database and files from your iPhone. You can ask for your Aorum account data to be deleted at support@aorum.app.</li>
+</ul>
+
+<h2>6. How long we keep data</h2>
 <p>Data on your iPhone stays until you delete it or delete the app. The sync file stays on your account with the chosen provider until you delete it. We keep Aorum account data for as long as you have the account; data in database backups disappears when those backups expire. We do not store events and tasks from Google at all — they exist only on your iPhone, in the app's memory and in the preview for widgets.</p>
 
-<h2>6. Who receives the data</h2>
+<h2>7. Who receives the data</h2>
 <ul>
   <li><strong>Supabase</strong> (Frankfurt region, EU) — stores the Aorum database on our behalf as a&nbsp;processor, when you use an Aorum account.</li>
   <li><strong>Apple</strong> — calendars and reminders on your iPhone, iCloud Drive, Siri and the weather forecast (WeatherKit).</li>
@@ -192,13 +216,13 @@
 </ul>
 <p>We do not share data with any other company.</p>
 
-<h2>7. Your rights</h2>
+<h2>8. Your rights</h2>
 <p>Under the GDPR you have the right to access your data, rectify it, erase it, restrict its processing, port it and object to its processing. You can revoke the app's access to Google by signing out in the app's settings or in your Google account settings (Security → Third-party connections). You have the right to lodge a&nbsp;complaint with the President of the Personal Data Protection Office (UODO) in Poland.</p>
 
-<h2>8. Changes to this policy</h2>
+<h2>9. Changes to this policy</h2>
 <p>We will update this policy before the app becomes available on the App Store and as it develops. The date of the last change is at the top of the page.</p>
 
-<h2>9. Contact</h2>
+<h2>10. Contact</h2>
 <p>For data-protection matters, write to support@aorum.app.</p>
 
 </div>
