@@ -56,7 +56,7 @@
 <div class="lang-pl" lang="pl">
 
 <h1><span class="product-copy">Polityka prywatności — Aorum <span class="product-name">Mail</span></span></h1>
-<p class="meta">Ostatnia aktualizacja: 25 października 2026 · Administrator danych: Vansa Sp. z&nbsp;o.o., ul. Jana Smolenia 14, 30-864 Kraków (KRS 0000675425, NIP 6793148076) · Kontakt: support@aorum.app · Strona: aorum.app</p>
+<p class="meta">Ostatnia aktualizacja: 29 października 2026 · Administrator danych: Vansa Sp. z&nbsp;o.o., ul. Jana Smolenia 14, 30-864 Kraków (KRS 0000675425, NIP 6793148076) · Kontakt: support@aorum.app · Strona: aorum.app</p>
 
 <div class="box">
   <p><strong>W&nbsp;skrócie:</strong><span class="product-copy"> Aorum <span class="product-name">Mail</span> działa w</span>&nbsp;całości na Twoim iPhonie. Aplikacja łączy się bezpośrednio z&nbsp;Twoim dostawcą poczty — Google, Microsoft, Apple albo serwerem IMAP — i&nbsp;trzyma pocztę i&nbsp;kontakty w&nbsp;swojej bazie na telefonie. Nie przesyłamy na nasze serwery i&nbsp;nie przechowujemy na nich danych z&nbsp;Twojej skrzynki (w&nbsp;tym danych z&nbsp;Gmaila), tokenów OAuth, kodów autoryzacji ani haseł. Powiadomienia o&nbsp;nowej poczcie i&nbsp;wysyłkę zaplanowanych wiadomości obsługuje sam telefon. Funkcje oparte na iCloud, Dysku Google i&nbsp;OneDrive zapisują dane na Twoich własnych kontach w&nbsp;tych usługach — nie mamy do nich dostępu. Asystent AI, wyszukiwanie według znaczenia i&nbsp;uczący się podział skrzynki działają wyłącznie na iPhonie. Nie sprzedajemy danych i&nbsp;nie prowadzimy śledzenia reklamowego.</p>
@@ -163,7 +163,7 @@
   <li><strong>Podstawa prawna:</strong> Twoja zgoda wyrażona zaznaczeniem pola w&nbsp;formularzu (art. 6 ust. 1 lit. a&nbsp;RODO).</li>
   <li><strong>Jak długo:</strong> do wysłania powiadomienia o&nbsp;premierze, a&nbsp;najpóźniej 12 miesięcy od zapisu — potem zgłoszenie jest usuwane automatycznie.</li>
   <li><strong>Wycofanie zgody:</strong> napisz na support@aorum.app, a&nbsp;usuniemy Twój adres z&nbsp;listy. Wycofanie zgody nie wpływa na zgodność z&nbsp;prawem przetwarzania sprzed jej wycofania.</li>
-  <li><strong>Gdzie:</strong> zgłoszenia przechowuje osobna baza danych w&nbsp;Google Cloud, w&nbsp;regionie europe-central2 (Warszawa), oddzielona od danych usług aplikacji. Google Cloud przetwarza je w&nbsp;naszym imieniu jako podmiot przetwarzający (punkt 8).</li>
+  <li><strong>Gdzie:</strong> zgłoszenia przechowuje osobna baza danych w&nbsp;Google Cloud, w&nbsp;regionie europe-central2 (Warszawa), oddzielona od danych usług aplikacji. Google Cloud przetwarza je w&nbsp;naszym imieniu jako podmiot przetwarzający (punkt 9).</li>
   <li><strong>Logi techniczne:</strong> standardowe logi infrastruktury Google Cloud mogą zawierać adres IP i&nbsp;czas wysłania formularza. Służą bezpieczeństwu usługi, w&nbsp;tym ochronie przed nadużyciami (art. 6 ust. 1 lit. f RODO), i&nbsp;są usuwane automatycznie, standardowo po 30 dniach.</li>
 </ul>
 <p>Podanie adresu jest dobrowolne; bez niego nie wyślemy powiadomienia.</p>
@@ -199,28 +199,41 @@
   <li><strong>AI tylko na urządzeniu</strong> — asystent AI, Ask i&nbsp;uczący się podział skrzynki działają na iPhonie (model Apple wbudowany w&nbsp;iOS); treść poczty nie trafia do żadnego zewnętrznego serwera AI (punkty 2.4 i&nbsp;2.12).</li>
   <li><strong>Najwęższy potrzebny dostęp</strong> — przy logowaniu aplikacja prosi, poza adresem e-mail konta Google, tylko o&nbsp;zakres gmail.modify, a&nbsp;nie o&nbsp;pełny dostęp do Gmaila, więc nie może trwale usuwać wiadomości z&nbsp;pominięciem kosza. O&nbsp;zakres gmail.settings.basic prosi dopiero wtedy, gdy włączysz zarządzanie regułami, a&nbsp;o&nbsp;drive.file — gdy wyślesz duży plik jako link; drive.file daje dostęp wyłącznie do plików utworzonych przez aplikację (punkty 2.10 i&nbsp;2.13).</li>
   <li><strong>Bez sprzedaży, reklam i&nbsp;trenowania AI</strong> — danych z&nbsp;Google nie sprzedajemy, nie przekazujemy nikomu, nie używamy do reklam ani do trenowania modeli AI; korzystamy z&nbsp;nich zgodnie z&nbsp;wymaganiami ograniczonego użycia (Limited Use) Google API Services User Data Policy (punkt 2.13).</li>
-  <li><strong>Usunięcie danych i&nbsp;cofnięcie dostępu</strong> — odłączenie konta (Disconnect) w&nbsp;szczegółach konta usuwa z&nbsp;telefonu lokalną kopię jego poczty i&nbsp;jego tokeny, a&nbsp;usunięcie aplikacji usuwa wszystko, co zapisała na telefonie. Dostęp aplikacji cofniesz też w&nbsp;ustawieniach konta Google (Bezpieczeństwo → Aplikacje innych firm). Szczegóły: punkt 7; pytania: support@aorum.app.</li>
+  <li><strong>Usunięcie danych i&nbsp;cofnięcie dostępu</strong> — odłączenie konta (Disconnect) w&nbsp;szczegółach konta usuwa z&nbsp;telefonu jego tokeny, a&nbsp;„Remove from this iPhone” — lokalną kopię jego poczty; usunięcie aplikacji usuwa jej bazę i&nbsp;pliki. Dostęp aplikacji cofniesz też w&nbsp;ustawieniach konta Google (Bezpieczeństwo → Aplikacje innych firm). Szczegóły: punkty 6 i&nbsp;8; pytania: support@aorum.app.</li>
 </ul>
 
-<h2>6. Jak długo przechowujemy dane</h2>
+<h2 id="google-data-retention-pl">6. Przechowywanie i&nbsp;usuwanie danych użytkownika Google</h2>
+<p>Ten punkt dotyczy danych, które aplikacja otrzymuje z&nbsp;interfejsów API Google (Gmail i&nbsp;Dysk Google, punkt 2.13).</p>
+<ul>
+  <li><strong>Co i&nbsp;gdzie przechowujemy</strong> — wiadomości z&nbsp;Gmaila (treść i&nbsp;nagłówki), pobrane załączniki, etykiety i&nbsp;stan wiadomości (przeczytane, archiwum, kosz), szkice, indeks wyszukiwania oraz tokeny OAuth. Wszystko to jest zapisane wyłącznie na Twoim iPhonie: poczta i&nbsp;indeks w&nbsp;bazie aplikacji, kopie załączników w&nbsp;jej plikach, tokeny w&nbsp;pęku kluczy iOS (punkt 5).</li>
+  <li><strong>Jak długo</strong> — dostęp do Gmaila i&nbsp;tokeny OAuth trzymamy tylko tak długo, jak konto Gmail jest podłączone w&nbsp;aplikacji. Lokalna kopia poczty zostaje na telefonie do chwili, gdy usuniesz konto z&nbsp;telefonu albo usuniesz aplikację.</li>
+  <li><strong>Odłączenie konta</strong> — w&nbsp;Ustawieniach aplikacji (Settings → Accounts → konto Gmail) przycisk „Disconnect” od razu usuwa z&nbsp;pęku kluczy iOS tokeny OAuth tego konta, wylogowuje je z&nbsp;logowania Google na telefonie i&nbsp;zatrzymuje synchronizację. Od tej chwili aplikacja nie ma dostępu do Twojego Gmaila.</li>
+  <li><strong>Usunięcie danych z&nbsp;telefonu</strong> — po odłączeniu w&nbsp;tym samym miejscu pojawia się przycisk „Remove from this iPhone”. Po potwierdzeniu („Remove account”) aplikacja usuwa z&nbsp;telefonu konto i&nbsp;jego foldery, pobrane wiadomości i&nbsp;szkice, kopie załączników, kolejkę wysyłki, powiadomienia oraz stan synchronizacji z&nbsp;Gmailem (w&nbsp;tym przypisanie etykiet). Indeks wyszukiwania według znaczenia usuwa te rozmowy przy najbliższej aktualizacji. Same nazwy etykiet mogą zostać na liście etykiet profilu, bez wiadomości, do usunięcia profilu albo aplikacji. Twoja skrzynka w&nbsp;Gmailu zostaje nietknięta.</li>
+  <li><strong>Usunięcie aplikacji</strong> — iOS usuwa z&nbsp;telefonu bazę i&nbsp;pliki aplikacji, a&nbsp;z&nbsp;nimi całą pocztę, załączniki i&nbsp;indeks. Wpisy w&nbsp;pęku kluczy iOS system może zachować po usunięciu aplikacji, dlatego przed jej usunięciem odłącz konto („Disconnect”) albo cofnij dostęp w&nbsp;koncie Google — wtedy zachowane tokeny przestają działać.</li>
+  <li><strong>Cofnięcie dostępu w&nbsp;Google</strong> — w&nbsp;każdej chwili na stronie <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> (Konto Google → Bezpieczeństwo → aplikacje i&nbsp;usługi innych firm). Po cofnięciu aplikacja nie może już pobierać ani zmieniać Twojej poczty. „Disconnect” w&nbsp;aplikacji usuwa tokeny z&nbsp;telefonu, ale nie cofa zgody po stronie Google — zrobisz to na tej stronie.</li>
+  <li><strong>Nic na naszych serwerach</strong> — nie przechowujemy na naszych serwerach żadnych danych użytkownika Google: poczty, etykiet, załączników, tokenów OAuth ani kodów autoryzacji. Funkcje serwerowe z&nbsp;wcześniejszych wersji testowych (powiadomienia z&nbsp;serwera i&nbsp;wysyłka zaplanowana z&nbsp;serwera) są wyłączone, a&nbsp;dane związane z&nbsp;Gmailem, które wtedy zapisały na serwerze, usunęliśmy 19 października 2026&nbsp;r. Pliki wysłane jako link zostają na Twoim Dysku Google, dopóki ich nie usuniesz (punkt 2.10).</li>
+  <li><strong>Prośba o&nbsp;usunięcie danych</strong> — napisz na support@aorum.app. Nie mamy kopii Twoich danych Google, więc pomożemy Ci usunąć je z&nbsp;telefonu i&nbsp;cofnąć dostęp; samo zgłoszenie przechowujemy tylko przez czas jego obsługi (punkt 7).</li>
+</ul>
+
+<h2>7. Jak długo przechowujemy dane</h2>
 <ul>
   <li><strong>Poczta, kontakty, ustawienia, kolejka wysyłki, indeks wyszukiwania, klucze publiczne i&nbsp;dane podziału skrzynki na urządzeniu</strong> — do czasu usunięcia konta w&nbsp;aplikacji albo usunięcia samej aplikacji (indeks wyszukiwania według znaczenia — do usunięcia aplikacji).</li>
   <li><strong>Dane w&nbsp;Twoim iCloud</strong> (stan aplikacji, wspólne szkice i&nbsp;komentarze) — do czasu, aż je usuniesz; przechowuje je Apple w&nbsp;ramach Twojego konta iCloud.</li>
   <li><strong>Pliki na Dysku Google i&nbsp;w&nbsp;OneDrive</strong> — do czasu, aż je usuniesz; przechowują je Google albo Microsoft w&nbsp;ramach Twojego konta.</li>
-  <li><strong>Dane z&nbsp;wcześniejszych wersji testowych</strong> — jeśli w&nbsp;wersji testowej (TestFlight) korzystałeś/aś z&nbsp;usług serwerowych, które wyłączyliśmy, zapisane wtedy na serwerze rejestracje, autoryzacje i&nbsp;zadania usuwamy; możesz też usunąć je sam/a&nbsp;(punkt 7).</li>
+  <li><strong>Dane z&nbsp;wcześniejszych wersji testowych</strong> — jeśli w&nbsp;wersji testowej (TestFlight) korzystałeś/aś z&nbsp;usług serwerowych, które wyłączyliśmy, zapisane wtedy na serwerze rejestracje, autoryzacje i&nbsp;zadania usuwamy; możesz też usunąć je sam/a&nbsp;(punkt 8).</li>
   <li><strong>Zgłoszenia „Powiadom mnie o&nbsp;premierze”</strong> ze strony aorum.app — do wysłania powiadomienia o&nbsp;premierze, najpóźniej 12 miesięcy od zapisu (automatyczne usunięcie, punkt 2.16).</li>
   <li><strong>Zgłoszenia do pomocy technicznej</strong> — przez czas potrzebny do obsługi zgłoszenia.</li>
 </ul>
 
-<h2>7. Jak usunąć swoje dane</h2>
-<p>W&nbsp;Ustawieniach aplikacji, w&nbsp;szczegółach konta, możesz odłączyć dowolne konto pocztowe (Disconnect) — usuwa to lokalną kopię jego poczty i&nbsp;jego tokeny z&nbsp;telefonu. Usunięcie aplikacji z&nbsp;telefonu usuwa wszystkie dane, które zapisała na telefonie. Dostęp aplikacji do konta Google możesz też cofnąć w&nbsp;ustawieniach swojego konta Google (Bezpieczeństwo → Aplikacje innych firm).</p>
+<h2>8. Jak usunąć swoje dane</h2>
+<p>W&nbsp;Ustawieniach aplikacji, w&nbsp;szczegółach konta, możesz odłączyć dowolne konto pocztowe (Disconnect) — usuwa to jego tokeny z&nbsp;telefonu; potem przycisk „Remove from this iPhone” usuwa z&nbsp;telefonu lokalną kopię jego poczty (szczegóły dla Gmaila: punkt 6). Usunięcie aplikacji z&nbsp;telefonu usuwa jej bazę i&nbsp;pliki. Dostęp aplikacji do konta Google możesz też cofnąć w&nbsp;ustawieniach swojego konta Google (Bezpieczeństwo → Aplikacje innych firm).</p>
 <p>Jeśli korzystałeś/aś z&nbsp;wcześniejszej wersji testowej z&nbsp;usługami serwerowymi, w&nbsp;Ustawienia → Bezpieczeństwo → Dane na serwerze przycisk „Usuń moje dane z&nbsp;serwera” usuwa wszystko, co serwer zapisał wtedy dla kont z&nbsp;tego iPhone'a. Polecenie usunięcia zawiera tylko potwierdzenie tożsamości konta (token tożsamości Google albo identyfikator zarządzania zapisany na telefonie) — bez danych z&nbsp;poczty i&nbsp;bez tokenów dostępu.</p>
 <p>Stan aplikacji w&nbsp;iCloud usuniesz przyciskiem „Delete iCloud data” (Ustawienia → Profile → iCloud) albo w&nbsp;Ustawieniach iOS (Twoje konto Apple → iCloud → zarządzanie pamięcią). Udostępnianie szkicu możesz zakończyć w&nbsp;każdej chwili, a&nbsp;pliki wysłane jako link usuniesz na Dysku Google albo w&nbsp;OneDrive. Możesz też napisać na adres support@aorum.app z&nbsp;prośbą o&nbsp;informację, jakie dane są z&nbsp;Tobą powiązane, oraz o&nbsp;ich usunięcie.</p>
 
-<h2>8. Odbiorcy danych</h2>
+<h2>9. Odbiorcy danych</h2>
 <ul>
   <li><strong>Dostawcy poczty</strong> (Google, Microsoft, Apple albo Twój serwer IMAP) — Twoja aplikacja łączy się z&nbsp;nimi bezpośrednio; to Twoja relacja z&nbsp;dostawcą, nie z&nbsp;nami.</li>
-  <li><strong>Google Cloud</strong> (region europe-central2, Warszawa) — przetwarza w&nbsp;naszym imieniu, jako dostawca infrastruktury (podmiot przetwarzający), zgłoszenia z&nbsp;formularza „Powiadom mnie o&nbsp;premierze” na stronie aorum.app (punkt 2.16) oraz polecenia usunięcia danych z&nbsp;wcześniejszych wersji testowych (punkt 7). Nie trafiają tam dane z&nbsp;Twojej poczty.</li>
+  <li><strong>Google Cloud</strong> (region europe-central2, Warszawa) — przetwarza w&nbsp;naszym imieniu, jako dostawca infrastruktury (podmiot przetwarzający), zgłoszenia z&nbsp;formularza „Powiadom mnie o&nbsp;premierze” na stronie aorum.app (punkt 2.16) oraz polecenia usunięcia danych z&nbsp;wcześniejszych wersji testowych (punkt 8). Nie trafiają tam dane z&nbsp;Twojej poczty.</li>
   <li><strong>Apple</strong> — dostarcza przez usługę APNs powiadomienia o&nbsp;nowych komentarzach do wspólnych szkiców (punkt 2.8); zakup subskrypcji Pro w&nbsp;App Store obsługuje jako odrębny administrator (punkt 2.17).</li>
   <li><strong>Dostawcy Twoich własnych usług, których nie kontrolujemy:</strong> Apple (iCloud i&nbsp;CloudKit — stan aplikacji, wspólne szkice i&nbsp;komentarze), Google (Dysk Google) i&nbsp;Microsoft (OneDrive) — duże załączniki jako link. Przetwarzają dane na podstawie Twojej umowy z&nbsp;nimi; nie są naszymi podmiotami przetwarzającymi.</li>
   <li><strong>Serwery WWW domen adresatów</strong> — gdy aplikacja szuka klucza OpenPGP adresata (WKD), serwer jego domeny widzi adres IP Twojego telefonu i&nbsp;adres, o&nbsp;który pytano (punkt 2.11).</li>
@@ -230,13 +243,13 @@
 </ul>
 <p>Nie przekazujemy danych innym firmom i&nbsp;nie używamy narzędzi analitycznych ani reklamowych.</p>
 
-<h2>9. Prawa użytkownika</h2>
+<h2>10. Prawa użytkownika</h2>
 <p>Zgodnie z&nbsp;RODO masz prawo do: dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz sprzeciwu wobec przetwarzania. Możesz też cofnąć zgodę na dowolną funkcję w&nbsp;dowolnym momencie w&nbsp;Ustawieniach aplikacji lub iOS. Masz prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (UODO).</p>
 
-<h2>10. Zmiany polityki</h2>
+<h2>11. Zmiany polityki</h2>
 <p>Możemy aktualizować tę politykę wraz z&nbsp;rozwojem aplikacji. Datę ostatniej zmiany znajdziesz na górze strony. Istotne zmiany zakresu przetwarzania ogłosimy w&nbsp;aplikacji.</p>
 
-<h2>11. Kontakt</h2>
+<h2>12. Kontakt</h2>
 <p>W&nbsp;sprawach związanych z&nbsp;ochroną danych osobowych pisz na support@aorum.app.</p>
 
 </div>
@@ -244,7 +257,7 @@
 <div class="lang-en" lang="en">
 
 <h1><span class="product-copy">Privacy Policy — Aorum <span class="product-name">Mail</span></span></h1>
-<p class="meta">Last updated: 25 October 2026 · Data controller: Vansa Sp. z&nbsp;o.o., ul. Jana Smolenia 14, 30-864 Kraków (KRS 0000675425, NIP 6793148076) · Contact: support@aorum.app · Site: aorum.app</p>
+<p class="meta">Last updated: 29 October 2026 · Data controller: Vansa Sp. z&nbsp;o.o., ul. Jana Smolenia 14, 30-864 Kraków (KRS 0000675425, NIP 6793148076) · Contact: support@aorum.app · Site: aorum.app</p>
 
 <div class="box">
   <p><strong>In short:</strong><span class="product-copy"> Aorum <span class="product-name">Mail</span> runs entirely on your iPhone. The app connects directly to your mail provider — Google, Microsoft, Apple or an IMAP server — and keeps your mail and contacts in its own database on the phone. We do not send to or store on our servers any data from your mailbox (including Gmail data), OAuth tokens, authorization codes or passwords. New-mail notifications and scheduled sending are handled by the phone itself. Features built on iCloud, Google Drive and OneDrive store data in your own accounts with those services — we have no access to them. The AI assistant, meaning-based search and the learning inbox split run only on your iPhone. We do not sell your data and we do not run advertising tracking.</span></p>
@@ -351,7 +364,7 @@
   <li><strong>Legal basis:</strong> your consent, given by ticking the box in the form (Art. 6(1)(a) GDPR).</li>
   <li><strong>How long:</strong> until the launch notification is sent, and no longer than 12 months after sign-up — after that the sign-up is deleted automatically.</li>
   <li><strong>Withdrawing consent:</strong> write to support@aorum.app and we will remove your address from the list. Withdrawal does not affect the lawfulness of processing before it.</li>
-  <li><strong>Where:</strong> sign-ups are kept in a&nbsp;separate Google Cloud database in the europe-central2 region (Warsaw), kept apart from the app services' data. Google Cloud processes them on our behalf as a&nbsp;data processor (section 8).</li>
+  <li><strong>Where:</strong> sign-ups are kept in a&nbsp;separate Google Cloud database in the europe-central2 region (Warsaw), kept apart from the app services' data. Google Cloud processes them on our behalf as a&nbsp;data processor (section 9).</li>
   <li><strong>Technical logs:</strong> standard Google Cloud infrastructure logs may contain the IP address and time the form was sent. They serve the security of the service, including protection against abuse (Art. 6(1)(f) GDPR), and are deleted automatically, by default after 30 days.</li>
 </ul>
 <p>Giving your address is voluntary; without it we cannot send the notification.</p>
@@ -387,28 +400,41 @@
   <li><strong>AI on the device only</strong> — the AI assistant, Ask and the learning inbox split run on the iPhone (Apple's model built into iOS); mail content is not sent to any external AI server (sections 2.4 and 2.12).</li>
   <li><strong>Least access needed</strong> — at sign-in the app asks, apart from the Google account's email address, only for the gmail.modify scope, not for full Gmail access, so it cannot permanently delete messages bypassing the trash. It asks for gmail.settings.basic only when you turn on rules management, and for drive.file only when you send a&nbsp;large file as a&nbsp;link; drive.file gives access only to files the app created (sections 2.10 and 2.13).</li>
   <li><strong>No selling, advertising or AI training</strong> — we do not sell Google data, share it with anyone, use it for advertising or use it to train AI models; we use it in line with the Limited Use requirements of the Google API Services User Data Policy (section 2.13).</li>
-  <li><strong>Deletion and revoking access</strong> — disconnecting an account (Disconnect) in the account details deletes the local copy of its mail and its tokens from the phone, and deleting the app removes everything it saved on the phone. You can also revoke the app's access in your Google account settings (Security → Third-party apps). Details: section 7; questions: support@aorum.app.</li>
+  <li><strong>Deletion and revoking access</strong> — disconnecting an account (Disconnect) in the account details deletes its tokens from the phone, and "Remove from this iPhone" deletes the local copy of its mail; deleting the app deletes its database and files. You can also revoke the app's access in your Google account settings (Security → Third-party apps). Details: sections 6 and 8; questions: support@aorum.app.</li>
 </ul>
 
-<h2>6. How long we keep data</h2>
+<h2 id="google-data-retention-en">6. Retention and deletion of Google user data</h2>
+<p>This section covers the data the app receives from Google APIs (Gmail and Google Drive, section 2.13).</p>
+<ul>
+  <li><strong>What we keep and where</strong> — Gmail messages (body and headers), downloaded attachments, labels and message state (read, archived, trashed), drafts, the search index and OAuth tokens. All of it is stored only on your iPhone: mail and the index in the app's database, attachment copies in its files, tokens in the iOS Keychain (section 5).</li>
+  <li><strong>How long</strong> — Gmail access and the OAuth tokens are kept only for as long as the Gmail account is connected in the app. The local copy of the mail stays on the phone until you remove the account from the phone or delete the app.</li>
+  <li><strong>Disconnecting the account</strong> — in the app's Settings (Settings → Accounts → the Gmail account), "Disconnect" immediately deletes that account's OAuth tokens from the iOS Keychain, signs it out of Google Sign-In on the phone and stops syncing. From then on the app has no access to your Gmail.</li>
+  <li><strong>Deleting the data from the phone</strong> — after disconnecting, the same screen shows "Remove from this iPhone". When you confirm ("Remove account"), the app deletes from the phone the account and its folders, downloaded messages and drafts, attachment copies, the send queue, notifications and the Gmail sync state (including label assignments). The meaning-based search index drops those conversations at its next update. Label names alone may stay in the profile's label list, without any messages, until you delete the profile or the app. Your Gmail mailbox is not affected.</li>
+  <li><strong>Deleting the app</strong> — iOS deletes the app's database and files from the phone, and with them all mail, attachments and the index. iOS may keep the app's Keychain entries after the app is deleted, so disconnect the account ("Disconnect") or revoke access in your Google Account before deleting the app — the kept tokens then stop working.</li>
+  <li><strong>Revoking access at Google</strong> — at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> (Google Account → Security → third-party apps &amp; services). After that the app can no longer read or change your mail. "Disconnect" in the app deletes the tokens from the phone but does not withdraw the grant at Google — you do that on this page.</li>
+  <li><strong>Nothing on our servers</strong> — we do not store any Google user data on our servers: no mail, labels, attachments, OAuth tokens or authorization codes. The server features of earlier test versions (server notifications and server-side scheduled sending) are switched off, and the Gmail-related data they stored on the server then was deleted on 19 October 2026. Files sent as links stay in your Google Drive until you delete them (section 2.10).</li>
+  <li><strong>Deletion requests</strong> — write to support@aorum.app. We hold no copy of your Google data, so we will help you delete it from the phone and revoke access; the request itself is kept only for as long as needed to handle it (section 7).</li>
+</ul>
+
+<h2>7. How long we keep data</h2>
 <ul>
   <li><strong>Mail, contacts, settings, the send queue, the search index, public keys and inbox-split data on the device</strong> — until you remove the account in the app or remove the app itself (the meaning-based search index — until you remove the app).</li>
   <li><strong>Data in your iCloud</strong> (app state, shared drafts and comments) — until you delete it; Apple stores it as part of your iCloud account.</li>
   <li><strong>Files in Google Drive and OneDrive</strong> — until you delete them; Google or Microsoft stores them as part of your account.</li>
-  <li><strong>Data from earlier test versions</strong> — if you used the server services we have switched off in a&nbsp;test version (TestFlight), we are deleting the registrations, authorizations and jobs the server kept then; you can also delete them yourself (section 7).</li>
+  <li><strong>Data from earlier test versions</strong> — if you used the server services we have switched off in a&nbsp;test version (TestFlight), we are deleting the registrations, authorizations and jobs the server kept then; you can also delete them yourself (section 8).</li>
   <li><strong>"Notify me at launch" sign-ups</strong> from aorum.app — until the launch notification is sent, and no longer than 12 months after sign-up (automatic deletion, section 2.16).</li>
   <li><strong>Support requests</strong> — for as long as needed to handle the request.</li>
 </ul>
 
-<h2>7. How to delete your data</h2>
-<p>In the app's Settings, under an account's details, you can disconnect any mail account — this removes its local mail copy and its tokens from the phone. Removing the app deletes everything it kept on the phone. You can also revoke the app's access to your Google Account in your Google Account settings (Security → Third-party apps).</p>
+<h2>8. How to delete your data</h2>
+<p>In the app's Settings, under an account's details, you can disconnect any mail account — this removes its tokens from the phone; "Remove from this iPhone" then deletes its local mail copy from the phone (details for Gmail: section 6). Removing the app deletes its database and files. You can also revoke the app's access to your Google Account in your Google Account settings (Security → Third-party apps).</p>
 <p>If you used an earlier test version with server services, "Delete my data from server" in Settings → Security → Server data deletes everything the server kept then for the accounts on this iPhone. The deletion request carries only proof of the account's identity (a&nbsp;Google identity token, or a&nbsp;management identifier kept on the phone) — no mail data and no access tokens.</p>
 <p>You delete the app's state in iCloud with "Delete iCloud data" (Settings → Profile → iCloud) or in iOS Settings (your Apple Account → iCloud → storage management). You can stop sharing a&nbsp;draft at any time, and you delete files sent as links in Google Drive or OneDrive. You can also write to support@aorum.app to ask what data is linked to you, and to have it deleted.</p>
 
-<h2>8. Who receives the data</h2>
+<h2>9. Who receives the data</h2>
 <ul>
   <li><strong>Mail providers</strong> (Google, Microsoft, Apple, or your own IMAP server) — the app connects to them directly; that is your relationship with the provider, not with us.</li>
-  <li><strong>Google Cloud</strong> (europe-central2 region, Warsaw) — processes, on our behalf and as the infrastructure provider (data processor), sign-ups from the "Notify me at launch" form on aorum.app (section 2.16) and requests to delete data from earlier test versions (section 7). No data from your mail goes there.</li>
+  <li><strong>Google Cloud</strong> (europe-central2 region, Warsaw) — processes, on our behalf and as the infrastructure provider (data processor), sign-ups from the "Notify me at launch" form on aorum.app (section 2.16) and requests to delete data from earlier test versions (section 8). No data from your mail goes there.</li>
   <li><strong>Apple</strong> — delivers notifications about new comments on shared drafts through APNs (section 2.8); handles the purchase of the Pro subscription in the App Store as a&nbsp;separate controller (section 2.17).</li>
   <li><strong>Providers of your own services, which we do not control:</strong> Apple (iCloud and CloudKit — app state, shared drafts and comments), Google (Google Drive) and Microsoft (OneDrive) — large attachments as links. They process data under your own agreement with them; they are not our data processors.</li>
   <li><strong>Web servers of recipients' domains</strong> — when the app looks up a&nbsp;recipient's OpenPGP key (WKD), the server of their domain sees your phone's IP address and the address that was looked up (section 2.11).</li>
@@ -418,13 +444,13 @@
 </ul>
 <p>We do not pass data to any other company, and we use no analytics or advertising tools.</p>
 
-<h2>9. Your rights</h2>
+<h2>10. Your rights</h2>
 <p>Under GDPR you have the right to access your data, have it corrected, deleted, have its processing restricted, request data portability, and object to processing. You can also withdraw consent for any feature at any time in the app's or iOS's Settings. You have the right to lodge a&nbsp;complaint with your national data-protection authority.</p>
 
-<h2>10. Changes to this policy</h2>
+<h2>11. Changes to this policy</h2>
 <p>We may update this policy as the app evolves. The date of the last change is shown at the top of the page. Material changes to the scope of processing will be announced in the app.</p>
 
-<h2>11. Contact</h2>
+<h2>12. Contact</h2>
 <p>For data-protection matters, write to support@aorum.app.</p>
 
 </div>
